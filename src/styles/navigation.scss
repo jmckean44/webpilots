@@ -32,7 +32,7 @@
 			z-index: 1;
 			&.active {
 				color: var.$theme-clr;
-				//font-family: var.$font-sans-serif-bold;
+				font-family: var.$font-sans-serif-bold;
 				opacity: 0;
 				animation: slideDown 1s cubic-bezier(0, 0, 0.3, 1) forwards;
 				animation-delay: 0.2s;
@@ -44,10 +44,10 @@
 	}
 }
 
-body.project #nav-desktop ul li:nth-child(3) {
-	color: var.$theme-clr;
-	font-family: var.$font-sans-serif-bold;
-}
+// body.project #nav-desktop a {
+// 	color: var.$theme-clr;
+// 	font-family: var.$font-sans-serif-bold;
+// }
 
 @keyframes slideDown {
 	0% {

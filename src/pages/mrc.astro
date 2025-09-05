@@ -13,7 +13,7 @@ import mobile from '../img/mrc-mobile.webp';
 import tablet from '../img/mask-tablet.webp';
 import laptop from '../img/mask-laptop.webp';
 import '../styles/page-work.scss';
-import '../styles/swiper.scss';
+
 ---
 
 <Layout pageTitle="Marina Resort Cavtat" pageSiteTitles="Web Pilots Services">
@@ -35,29 +35,35 @@ import '../styles/swiper.scss';
 		</div>
 	</section>
 
-	<section id="intro">
+	<section id="devices-section">
 		<div class="container top">
 			<div class="flex padding-x align-middle">
 				<div class="cell small-18">
-					<h1>Marina Resort Cavtat</h1>
-					<p class="txt-lrg">Marina Resort Cavtat is an up and coming resort in Croatia. </p>
-					<p class="justify">
+					<h2 class="title">Devices....</h2>
+					<h3 class="sub-title">XXXXXXXXX</h3>
+					<p>Marina Resort Cavtat is an up and coming resort in Croatia. </p>
+					<p>
 						saasdasd
 					</p>	
 
-					<div id="devices" class="flex align-center justify-center">
-						<div class="mobile device-container">
-							<Image src={mobileMask} class="mask" alt="Mobile image mask" />
-							<Image src={mobile} class="scroll" alt="Mobile device" />
+
+		
+
+
+					<div id="devices">
+		
+							<div class="device mobile trig-parallax-down enable-trig" data-trig-var="true">
+								<Image src={mobileMask} class="mask" alt="Mobile image mask" />
+								<Image src={mobile} class="image trig-target" alt="Mobile device" />
+							</div>
+							<div class="device tablet">
+								<Image src={tablet} class="mask" alt="Tablet image mask" />
+								<Image src={mobile} class="image" alt="Tablet device" />
+							</div>
+							<div class="device laptop">
+								<Image src={laptop} class="mask" alt="Laptop image mask" />
+								<Image src={mobile} class="image" alt="Laptop device" />
 						</div>
-						<!-- <div class="tablet device-container">
-							<Image src={tablet} class="mask" alt="Tablet image mask" />
-							<Image src={tablet} class="scroll device-hidden" alt="Tablet device" />
-						</div>
-						<div class="laptop device-container">
-							<Image src={laptop} class="mask" alt="Laptop image mask" />
-							<Image src={laptop} class="scroll device-hidden" alt="Laptop device" />
-						</div> -->
 					</div>
 
 
@@ -117,9 +123,56 @@ import '../styles/swiper.scss';
 		</div>
 	</section>
 
+	<section id="flipbook">
+	<div class="container top btm">
+		<div class="flex padding-x">
+			<div class="cell small-18">
+	<div id="timeline">
+		<video class="timeline" playsinline autoplay muted loop style="pointer-events: none;" poster="/timeline-poster-desktop.webp">
+			<source data-src="/timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
+			<source data-src="/timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
+		</video>
+	</div>
+	</div>
+		</div>	</div>
+	</section>
+
+
 
 
 
 </Layout>
 
 <script src="../scripts/swiper-projects.js"></script>
+
+<script>
+	const mainVideo = document.querySelector('.timeline');
+	const desktopVideo = '/timeline-desktop.mp4';
+	const mobileVideo = '/timeline-mobile.mp4';
+	const desktopPoster = '/timeline-poster-desktop.webp';
+	const mobilePoster = '/timeline-poster-mobile.webp';
+	const winWidth = window.innerWidth;
+
+	if (mainVideo) {
+		if (winWidth < 850) {
+			mainVideo.setAttribute('poster', mobilePoster);
+		} else {
+			mainVideo.setAttribute('poster', desktopPoster);
+		}
+	}
+
+	window.addEventListener('resize', function () {
+		const winWidth = window.innerWidth;
+
+		if (mainVideo) {
+			if (winWidth < 850) {
+				mainVideo.setAttribute('poster', mobilePoster);
+				mainVideo.setAttribute('src', mobileVideo);
+			} else {
+				mainVideo.setAttribute('poster', desktopPoster);
+				mainVideo.setAttribute('src', desktopVideo);
+			}
+		}
+	});
+</script>
+
