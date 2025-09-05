@@ -1,0 +1,101 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove first "/"
+import { Image } from 'astro:assets';
+import logo from '../img/logo.svg';
+import wordmark from '../img/logo-wordmark.svg';
+//import ThemeIcon from '../components/ThemeIcon.astro';
+---
+
+<a class="skip-navigation" href="#main-content">Skip to main content</a>
+
+<header id="header" class="">
+	<div class="header-sub-container">
+		<div id="logo-desktop">
+			<a href="/" aria-label="Logo" role="link" aria-label="link to homepage">
+				<Image src={logo} class="logo" alt="Web Pilots logo" />
+				<!-- <Image src={wordmark} class="wordmark" alt="Web Pilots wordmark" /> -->
+			</a>
+		</div>
+
+		<nav id="nav-desktop">
+			<ul>
+				<li>
+					<a class={currentPath === '' ? 'active' : ''} href="/" role="link" aria-label="link to Homepage">HOME</a>
+				</li>
+				<li>
+					<a class={currentPath === 'services/' ? 'active' : ''} href="/services/" role="link" aria-label="link to SERVICES page">SERVICES</a>
+				</li>
+				<li>
+					<a class={currentPath === 'work/' ? 'active' : ''} href="/work/" role="link" aria-label="link to WORK page">WORK</a>
+				</li>
+				<li>
+					<a class={currentPath === 'about/' ? 'active' : ''} href="/about/" role="link" aria-label="link to ABOUT page">ABOUT</a>
+				</li>
+				<li>
+					<a class={currentPath === 'contact/' ? 'active' : ''} href="/contact/" role="link" aria-label="link to contact page">CONTACT</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="overlay" id="mobile-overlay">
+	<div id="hamburger" aria-label="Open menu" aria-expanded="false" tabindex="0">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav id="nav-mobile">
+		<ul>
+			<li>
+				<a class={currentPath === '' ? 'active' : ''} href="/" role="link" aria-label="link to Homepage">HOME</a>
+			</li>
+			<li>
+				<a class={currentPath === 'about/' ? 'active' : ''} href="/about/" role="link" aria-label="link to ABOUT page">ABOUT</a>
+			</li>
+			<li>
+				<a class={currentPath === 'services/' ? 'active' : ''} href="/services/" role="link" aria-label="link to floorplans page">SERVICES</a>
+			</li>
+			<li>
+				<a class={currentPath === 'features/' ? 'active' : ''} href="/features/" role="link" aria-label="link to FEATURES page">FEATURES</a>
+			</li>
+			<li>
+				<a class={currentPath === 'builder/' ? 'active' : ''} href="/builder/" role="link" aria-label="link to BUILDER page">BUILDER</a>
+			</li>
+			<li>
+				<a class={currentPath === 'contact/' ? 'active' : ''} href="/contact/" role="link" aria-label="link to contact page">CONTACT</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- <div class="overlay">
+	<div id="hamburger">
+		<span></span>
+		<span></span>
+	</div>
+
+	<nav id="nav-mobile">
+		<ul>
+			<li>
+				<a class={currentPath === '' ? 'active' : ''} href="/" role="link" aria-label="link to Homepage">HOME</a>
+			</li>
+			<li>
+				<a class={currentPath === 'about/' ? 'active' : ''} href="/about/" role="link" aria-label="link to ABOUT page">ABOUT</a>
+			</li>
+			<li>
+				<a class={currentPath === 'services/' ? 'active' : ''} href="/services/" role="link" aria-label="link to floorplans page">SERVICES</a>
+			</li>
+			<li>
+				<a class={currentPath === 'features/' ? 'active' : ''} href="/features/" role="link" aria-label="link to FEATURES page">FEATURES</a>
+			</li>
+			<li>
+				<a class={currentPath === 'builder/' ? 'active' : ''} href="/builder/" role="link" aria-label="link to BUILDER page">BUILDER</a>
+			</li>
+			<li>
+				<a class={currentPath === 'contact/' ? 'active' : ''} href="/contact/" role="link" aria-label="link to contact page">CONTACT</a>
+			</li>
+		</ul>
+	</nav>
+</div> -->

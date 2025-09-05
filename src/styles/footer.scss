@@ -1,0 +1,74 @@
+@use 'variables.scss' as var;
+
+/* =================================
+   FOOTER
+==================================== */
+footer {
+	display: flex;
+	flex-direction: row;
+	background: var.$font-clr;
+	position: relative;
+	width: 100%;
+	padding: 2.5rem 0.5rem 0;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	line-height: 1.3;
+	color: #fff;
+}
+
+footer .container {
+	max-width: var.$container-width;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	color: #fff;
+	padding: 2rem 1rem;
+	gap: 2rem;
+
+	.footer-col {
+		min-width: 160px;
+		margin-bottom: 1.5rem;
+
+		h4 {
+			font-family: var.$font-sans-serif-semibold;
+			margin-bottom: 1rem;
+			font-size: 1.1rem;
+			color: #ff6000;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin-bottom: 0.5rem;
+				line-height: 1.2;
+
+				a {
+					color: #fff;
+					text-decoration: none;
+					transition: color 0.2s;
+					&:hover {
+						color: #ff7000;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer .container > :nth-last-child(1) {
+	margin-left: auto;
+}
+
+.footer #social img {
+	width: 17px;
+}
+
+.footer #social img:first-child {
+	margin-right: 0.5rem;
+}

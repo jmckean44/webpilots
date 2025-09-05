@@ -1,0 +1,105 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove first "/"
+const currentYear = new Date().getFullYear();
+import facebook from '../img/icon-facebook.svg';
+import { Image } from 'astro:assets';
+import instagram from '../img/icon-instagram.svg';
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-col">
+			<h4>Services</h4>
+			<ul>
+				<li><a href="/web-design/">Web Design</a></li>
+				<li><a href="/seo/">SEO</a></li>
+				<li><a href="/marketing/">Marketing</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>Work</h4>
+			<ul>
+				<li><a href="/blog/">Blog</a></li>
+				<li><a href="/faq/">FAQ</a></li>
+				<li><a href="/support/">Support</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>About</h4>
+			<ul>
+				<li><a href="/about/">Our Story</a></li>
+				<li><a href="/team/">Team</a></li>
+				<li><a href="/careers/">Careers</a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<h4>Contact</h4>
+			<ul>
+				<li><a class={currentPath === '' ? 'active' : ''} href="/" role="link" aria-label="link to Homepage">HOME</a></li>
+				<li><a href="/contact/">Contact Us</a></li>
+				<li><a href="mailto:info@webpilots.com">info@webpilots.ca</a></li>
+				<li><a href="tel:+4169861059">+416 986 1059</a></li>
+				<li>© {currentYear} WebPilots.ca</li>
+				<li id="social">
+					<a href="" target="_blank" role="link" aria-label="link to COMPANY on Facebook"><Image src={facebook} alt="" /></a>
+					<a href="" target="_blank" role="link" aria-label="link to COMPANY on Instagram"><Image src={instagram} alt="" /></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<!-- <nav>
+			<ul>
+				<li>
+					<a class={currentPath === '' ? 'active' : ''} href="/" role="link" aria-label="link to Homepage">HOME</a>
+				</li>
+				<li>
+					<a class={currentPath === 'about/' ? 'active' : ''} href="/about/" role="link" aria-label="link to ABOUT page">ABOUT</a>
+				</li>
+				<li>
+					<a class={currentPath === 'services/' ? 'active' : ''} href="/services/" role="link" aria-label="link to floorplans page">SERVICES</a>
+				</li>
+				<li>
+					<a class={currentPath === 'features/' ? 'active' : ''} href="/features/" role="link" aria-label="link to FEATURES page">FEATURES</a>
+				</li>
+				<li>
+					<a class={currentPath === 'builder/' ? 'active' : ''} href="/builder/" role="link" aria-label="link to BUILDER page">BUILDER</a>
+				</li>
+				<li>
+					<a class={currentPath === 'contact/' ? 'active' : ''} href="/contact/" role="link" aria-label="link to contact page">CONTACT</a>
+				</li>				
+			</ul>
+			<div id="copyright">
+				<p>© {currentYear} company</p>
+			</div>
+		</nav> -->
+
+<script src="../scripts/trig.js"></script>
+<script src="../scripts/scripts.js"></script>
+<script src="../scripts/lenis.js"></script>
+
+<script is:inline>
+	document.addEventListener('astro:page-load', () => {
+		let lastKnownScrollPosition = 0;
+		let ticking = false;
+
+		window.addEventListener('scroll', function () {
+			lastKnownScrollPosition = window.scrollY;
+
+			if (!ticking) {
+				window.requestAnimationFrame(function () {
+					const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+					const scrolled = (lastKnownScrollPosition / height) * 100;
+					const progressBar = document.getElementById('progress-bar');
+					if (progressBar) {
+						progressBar.style.width = scrolled + '%';
+					}
+					ticking = false;
+				});
+				ticking = true;
+			}
+		});
+	});
+</script>

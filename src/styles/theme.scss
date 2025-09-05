@@ -1,0 +1,56 @@
+@use 'variables.scss' as var;
+
+/* =============================================
+   PAGE BACKGROUND LIGHT/DARK
+================================================ */
+html {
+	scroll-behavior: smooth;
+}
+
+html #header {
+	//background: rgba(0, 0, 0, 0.5);
+	transition: 1s ease all;
+	//backdrop-filter: blur(10px);
+}
+
+html body {
+	background: var.$light;
+	background: linear-gradient(180deg, rgb(239, 235, 228) 0, rgba(255, 255, 255, 0.5) 300px, rgba(255, 255, 255, 1) 100%);
+}
+
+/* =============================================
+   THEME TOGGLE
+================================================ */
+#themeToggle {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	background: none;
+	padding: 0;
+	display: block;
+	margin: 0;
+}
+
+.sun {
+	fill: var.$theme-clr;
+	width: 15px;
+}
+.moon {
+	fill: transparent;
+}
+
+:global(.dark) .sun {
+	fill: transparent;
+}
+:global(.dark) .moon {
+	fill: white;
+}
+:global(.dark) {
+	color-scheme: dark;
+}
+
+@media (max-width: 500px) {
+	.controls {
+		margin-top: 130px;
+	}
+}

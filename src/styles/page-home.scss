@@ -1,0 +1,552 @@
+@use 'variables.scss' as var;
+
+#banner {
+	background: url('../img/placeholder.jpg') no-repeat center center;
+	background-size: cover;
+	height: clamp(500px, 65vw, 1100px);
+	transition: background-position 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#intro {
+	text-align: center;
+	max-width: 1000px;
+	margin: 3rem auto;
+	padding: 0 1.5rem;
+	//border: 1px red solid;
+}
+
+/* ====================
+	 H1 animation
+======================= */
+#intro h1 {
+	display: block;
+	//position: relative;
+	font-size: min(max(3rem, 5vw), 60px);
+	text-align: center;
+	font-family: var.$font-sans-serif-bold;
+	margin-bottom: 3rem;
+}
+
+#intro h1 span {
+	text-align: center;
+	pointer-events: none;
+	width: 100%;
+}
+
+#intro h1 span em {
+	font-family: var.$font-sans-serif-bold;
+}
+
+#intro p {
+	text-align: center;
+	//margin-bottom: 4rem;
+}
+
+#intro .btn {
+	text-align: center;
+	margin: 2rem auto 0;
+}
+
+/* ====================
+	 SOLUTIONS
+======================= */
+.solutions {
+	//padding: 2rem;
+	border-radius: var.$bdr-radius-lrg;
+}
+
+.hero {
+	background: var.$font-clr;
+	background-size: cover;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 3rem 2rem 7rem;
+	color: #fff;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: -4rem;
+	overflow: visible;
+}
+
+@media (max-width: 900px) {
+	.hero {
+		background-size: contain;
+		border-radius: var.$bdr-radius-lrg;
+	}
+}
+
+.hero h2,
+.hero p {
+	color: #fff;
+}
+
+.hero .content {
+	max-width: 700px;
+	z-index: 1;
+}
+
+.hero .content a {
+	color: var.$theme-clr;
+	&:hover {
+		padding-left: 0.5rem;
+		filter: brightness(1.8);
+	}
+}
+
+.hero h2 {
+	//font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.hero p {
+	margin-bottom: 2rem;
+}
+
+.hero-img {
+	max-width: 320px;
+	position: absolute;
+	right: 2rem;
+	bottom: 0;
+	height: 320px;
+	object-fit: contain;
+}
+
+.hero-icon {
+	position: absolute;
+	right: 200px;
+	top: 2rem;
+}
+
+.solutions .cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1.5rem;
+	padding: 0 5%;
+	margin-top: -3.5rem;
+	z-index: 1;
+	position: relative;
+}
+
+.solutions .card {
+	background: #f9f9f9;
+	border-radius: var.$bdr-radius-med;
+	border: 1px #e1e1e1 solid;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	flex: 1 1 0;
+	display: flex;
+	align-items: flex-end;
+	padding: 2rem 1.5rem 1.5rem 1.5rem;
+	position: relative;
+	min-height: 220px;
+}
+
+.solutions .card-content {
+	flex: 1;
+}
+
+.solutions .card h3 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+}
+
+.solutions .card:hover {
+	color: var.$theme-clr;
+}
+
+/* ====================
+	 SERVICES
+======================= */
+#services .header {
+	background: var.$font-clr;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 6rem 3rem 10rem;
+	color: #fff;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	transition: all ease 0.3s;
+}
+
+#services .header .content {
+	position: relative;
+	max-width: 50%;
+	z-index: 3;
+}
+
+#services .header .content .title {
+	color: var.$highlight;
+}
+
+#services .header .content .sub-title,
+#services .header .content p {
+	color: #fff;
+}
+
+#services .header .content p.link {
+	margin-top: auto;
+}
+
+#services .header .content p a {
+	color: var.$highlight;
+}
+
+#services .service-cards-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+	align-items: stretch;
+}
+
+.service-card {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 50px;
+	position: relative;
+	background: #f9f9f9;
+	border-radius: var.$bdr-radius-med;
+	padding: 2.5rem 2rem 2rem 2rem;
+	transition: all ease 0.3s;
+	cursor: pointer;
+}
+
+.service-card:hover {
+	background: var.$font-clr;
+	margin-top: -2.5rem;
+	padding: 5rem 2rem 2rem 2rem;
+}
+
+.service-card h2 {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	transition: all ease 0.3s;
+	color: var.$font-clr;
+}
+
+.service-card:hover h2 {
+	color: var.$highlight;
+	transition: all ease 0.3s;
+}
+
+.service-card:hover p {
+	color: #fff;
+	z-index: 9;
+	transition: all ease 0.3s;
+}
+
+.service-card p {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+	transition: all ease 0.3s;
+}
+
+.service-card p.link {
+	margin-top: auto;
+	margin-bottom: 0;
+	font-size: 1rem;
+}
+
+.service-card p.link a:hover {
+	margin-top: auto;
+	transition: all ease 0.5s;
+	font-size: 1rem;
+}
+
+.service-card:hover p.link a {
+	color: var.$highlight;
+	transition: all ease 0.3s;
+}
+
+.service-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: -1rem;
+	right: 2rem;
+	background: var.$highlight;
+	border-radius: var.$bdr-radius-med;
+	width: 60px;
+	height: 60px;
+	transition: all ease 0.3s;
+}
+
+.service-card:hover .service-icon {
+	background: var.$theme-clr;
+	border-radius: 50%;
+	right: 1.5rem;
+	top: -1rem;
+	width: 70px;
+	height: 70px;
+	background: var.$highlight;
+}
+
+.service-card .service-icon img {
+	border-radius: var.$bdr-radius-sm;
+}
+
+.service-card.mobile .service-icon img {
+	width: 25px;
+}
+.service-card.mobile:hover .service-icon img {
+	width: 30px;
+}
+
+.service-card.responsive .service-icon img {
+	width: 44px;
+}
+
+.service-card.performance .service-icon img {
+	width: 44px;
+}
+
+.service-card.seo .service-icon img {
+	width: 36px;
+}
+
+@media (max-width: var.$tablet) {
+	.service-icon {
+		top: -0.75rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	#services .service-cards-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.service-card:hover {
+		background: var.$font-clr;
+		margin-top: 0;
+		padding: 2.5rem 2rem 2rem 2rem;
+	}
+}
+
+/* =======================
+	 SERVICES LIGHTHOUSE
+========================== */
+.lighthouse-bg {
+	position: absolute;
+	right: -10%;
+	//top: -5%;
+	max-width: clamp(650px, 60vw, 50%);
+	//min-width: 600px;
+	z-index: 0;
+	margin: 0 auto;
+	opacity: 1;
+	pointer-events: none;
+}
+
+.lighthouse-progress {
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+	stroke-dasharray: 339.292;
+	stroke-dashoffset: 339.292;
+	transition: stroke-dashoffset 2s cubic-bezier(0.4, 1, 0.6, 1);
+}
+
+.lighthouse-bg.in-view .lighthouse-progress {
+	stroke-dashoffset: 23.93; // 90% (adjust as needed)
+}
+@keyframes lighthouse-progress {
+	to {
+		stroke-dashoffset: 23.93; /* 98% progress (adjust as needed) */
+	}
+}
+
+@media (max-width: 1000px) {
+	#services .header {
+		margin-bottom: 1.5rem;
+		padding: 5rem 2rem 60%;
+	}
+	#services .header .content {
+		max-width: 100%;
+	}
+	.lighthouse-bg {
+		//opacity: 0.5;
+		max-width: 80%;
+		min-width: auto;
+		right: 0;
+		left: 0;
+		top: auto;
+		bottom: -20%;
+	}
+}
+
+@media (max-width: 500px) {
+	#services .header {
+		padding: 4rem 2rem 55%;
+	}
+	.lighthouse-bg {
+		max-width: 80%;
+		bottom: -15%;
+	}
+}
+
+@media (max-width: var.$mobile) {
+	#services .service-cards-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#services .service-card {
+		padding: 2rem 1.5rem 1.5rem 2rem;
+	}
+}
+
+/* ====================
+	 PORTFOLIO
+======================= */
+#portfolio {
+	margin: 150px 0;
+}
+
+.portfolio {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	gap: 2rem;
+}
+
+.portfolio-card img {
+	margin-bottom: 2rem;
+}
+
+.portfolio-card {
+	background: #fff;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	border: 1px #e9e9e9 solid;
+	padding: 2rem 1.5rem 2.5rem 1.5rem;
+	border-radius: var.$bdr-radius-med;
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.portfolio-card h3 {
+	font-size: 1.4rem;
+	text-align: left;
+	margin-bottom: 0.5rem;
+}
+
+.portfolio-card .url {
+	font-family: var.$font-sans-serif-med-italic;
+	font-size: 1rem;
+	line-height: 1;
+	margin-bottom: 1rem;
+	display: block;
+	margin-top: auto;
+}
+
+.portfolio-card p.desc {
+	color: var.$font-clr;
+	font-size: 1.1rem;
+	margin-bottom: 2.5rem;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+.portfolio-btn {
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+.portfolio-btn a {
+	background: var.$font-clr;
+	color: #fff;
+	border-radius: var.$bdr-radius-sm;
+	padding: 0.4rem 0.75rem;
+	text-decoration: none;
+	font-family: var.$font-sans-serif-semibold;
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	transition: all ease 0.3s;
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 0.5rem;
+}
+
+.portfolio-btn a:hover {
+	background: var.$theme-clr;
+}
+
+@media (max-width: 600px) {
+	.portfolio {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+	.portfolio-card p.desc {
+		text-align: left;
+	}
+}
+
+/* ====================
+	 TESTIMONIALS
+======================= */
+#testimonials h5 {
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	color: var.$theme-clr;
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+#testimonials .swiper-slide {
+	background: #f7f7f7;
+	border-radius: var.$bdr-radius-med;
+	padding: clamp(2rem, 2.5vw, 3rem);
+	text-align: left;
+	position: relative;
+	min-height: 220px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#testimonials .swiper-slide p {
+	text-indent: 1.25rem;
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+#testimonials .quote {
+	color: var.$highlight;
+	font-family: var.$font-serif;
+	font-size: 3rem;
+	font-weight: 500;
+	line-height: 1;
+	width: 25px;
+	height: 20px;
+	position: absolute;
+	//border: 1px red solid;
+}
+
+#testimonials .quote.top {
+	left: 0;
+	top: 0;
+	transform: scaleX(-1);
+}
+
+#testimonials .quote.btm {
+	bottom: -0.5rem;
+}
+
+#testimonials .author {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var.$font-clr;
+	margin-top: auto;
+}
+
+#testimonials .author em {
+	font-size: 1rem;
+}
+
+#testimonials .author span {
+	font-size: 1rem;
+	font-weight: 400;
+	color: var.$font-clr;
+}

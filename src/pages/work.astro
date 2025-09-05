@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PictureComponent from '../components/PictureComponent.astro';
+import { Picture } from 'astro:assets';
+import Image from '../img/placeholder.jpg';
+import '../styles/page-work.scss';
+import yosi from '../img/yosi.webp';
+import marissa from '../img/marissa.webp';
+---
+
+<Layout pageTitle="About Web Pilots" pageSiteTitles="">
+	<!-- <PictureComponent mobileImgUrl={imageMobile} desktopImgUrl={image} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" /> -->
+
+	<section id="intro">
+		<div class="container top btm">
+			<div class="flex padding-x align-middle">
+				<div class="cell small-18 medium-9">
+					<h1>Web Pilots is...</h1>
+					<p class="txt-lrg">A collective of like-minded web designers, developers, SEO, and social media marketing professionals with a diverse range of expertise and backgrounds.</p>
+					<p>service, turnaround times</p>
+				</div>
+				<div class="cell small-18 medium-9">
+					<Picture src={Image} class="ai-card-img" alt="Person with laptop" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="pricing">
+		<div class="container top">
+			<h2 class="pricing-subtitle">Our Pricing</h2>
+			<h3 class="pricing-title">Pricing Packages For Every Budget</h3>
+			<div class="pricing-grid">
+				<div class="pricing-card">
+					<h4>Lump Sum</h4>
+					<ul>
+						<li>Design And Development <span class="check">&#10003;</span></li>
+						<li>$25/mo Hosting <span class="check">&#10003;</span></li>
+						<li>$100 fee Per Page after 5 <span class="check">&#10003;</span></li>
+						<li>+$50/mo Unlimited Edits Add-on <span class="check">&#10003;</span></li>
+						<li>+$250 To Add A Blog <span class="check">&#10003;</span></li>
+						<li>24/7 Support <span class="cross">&#10007;</span></li>
+						<li>Lifetime Updates <span class="cross">&#10007;</span></li>
+					</ul>
+					<div class="price">
+						<span class="amount">$3800</span>
+						<span class="note">+$25/mo Hosting</span>
+					</div>
+					<a href="#" class="card-cta">Get Started</a>
+				</div>
+				<div class="pricing-card featured">
+					<h4>Monthly</h4>
+					<ul>
+						<li>Design And Development <span class="check">&#10003;</span></li>
+						<li>Includes Hosting <span class="check">&#10003;</span></li>
+						<li>$100 fee Per Page After 5 <span class="check">&#10003;</span></li>
+						<li>+$250 To Add A Blog <span class="check">&#10003;</span></li>
+						<li>Unlimited Edits <span class="check">&#10003;</span></li>
+						<li>24/7 Support <span class="check">&#10003;</span></li>
+						<li>Lifetime Updates <span class="check">&#10003;</span></li>
+					</ul>
+					<div class="price">
+						<span class="amount">$175</span>
+						<span class="note">Per Month</span>
+					</div>
+					<a href="#" class="card-cta">Get Started</a>
+				</div>
+				<div class="pricing-card">
+					<h4>Ecommerce</h4>
+					<ul>
+						<li>Custom Shopify Store <span class="check">&#10003;</span></li>
+						<li>Configure Any And All Apps <span class="check">&#10003;</span></li>
+						<li>Integrated Shipping <span class="check">&#10003;</span></li>
+						<li>Shopify Tutorial Walkthrough <span class="check">&#10003;</span></li>
+						<li>Fully Editable In Shopify CMS <span class="check">&#10003;</span></li>
+						<li>+$50/mo Unlimited Edits <span class="cross">&#10007;</span></li>
+						<li>24/7 Support <span class="cross">&#10007;</span></li>
+					</ul>
+					<div class="price">
+						<span class="amount">$8k</span>
+						<span class="note">Starting</span>
+					</div>
+					<a href="#" class="card-cta">Get Started</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="offer">
+		<div class="container top btm">
+			<div class="offer-grid">
+				<div class="offer-photo">
+					<img src="your-photo.jpg" alt="Owner, Developer" />
+					<div class="offer-badge">
+						<strong>Ryan Postell</strong><br />
+						Owner, Developer
+						<span class="badge-icon">🌲🌲</span>
+					</div>
+				</div>
+				<div class="offer-content">
+					<h5 class="offer-subtitle">What We Offer</h5>
+					<h2 class="offer-title">Websites Starting at $0 Down and $175 Per Month</h2>
+					<p class="offer-desc">
+						We offer $0 down for a standard 5 page small business website. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time
+						involved. <strong>12 month minimum contract.</strong> Includes design, development, hosting, unlimited edits, 24/7 support, and lifetime updates.
+					</p>
+					<div class="offer-features">
+						<div class="feature">
+							<span class="feature-icon">&#9989;</span>
+							<strong>100% Secure</strong><br />Our sites are just static HTML and CSS code, meaning there’s literally nothing that can be hacked.
+						</div>
+						<div class="feature">
+							<span class="feature-icon">&#9989;</span>
+							<strong>Custom Designed</strong><br />Our designs are made by an in-house design team, which allows us to make anything we want.
+						</div>
+						<div class="feature">
+							<span class="feature-icon">&#9989;</span>
+							<strong>100 Pagespeed Scores</strong><br />Our sites have zero bloat, zero waste, and built with purpose so we get perfect 98-100/100 speed scores with Google.
+						</div>
+						<div class="feature">
+							<span class="feature-icon">&#9989;</span>
+							<strong>Money Back Guarantee</strong><br />If we can’t design something you like, you get your money back and the contract is cancelled. We stand by our work.
+						</div>
+						<div class="feature">
+							<span class="feature-icon">&#9989;</span>
+							<strong>Unmatched Support</strong><br />Call or text us anytime, no phone trees or robots. When you call us you get me - the owner and developer.
+						</div>
+						<div class="feature">
+							<span class="feature-icon">&#9989;</span>
+							<strong>We Know SEO</strong><br />No snake oil, no tricks, no lies. We explain very clearly what SEO is, how it works, and what we can do to get you ranking.
+						</div>
+					</div>
+					<a href="#" class="offer-cta">Schedule a Call</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

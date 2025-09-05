@@ -1,0 +1,178 @@
+@use 'variables.scss' as var;
+
+/* =================================
+   NAV DESKTOP
+==================================== */
+#nav-desktop {
+	flex: 1 1 auto;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	ul {
+		display: flex;
+		list-style: none;
+		li {
+			text-align: center;
+			margin-bottom: 0;
+		}
+		li a {
+			font-family: var.$font-sans-serif-med;
+			font-size: min(max(1rem, 1.75vw), 22px);
+			color: var.$font-clr;
+			display: inline-block;
+			text-align: center;
+			padding: 1.5rem clamp(0.75rem, 1.75vw, 5rem);
+			text-decoration: none;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 1;
+			letter-spacing: 2px;
+			transition: all ease 0.3s;
+			//border: 1px red solid;
+			z-index: 1;
+			&.active {
+				color: var.$theme-clr;
+				//font-family: var.$font-sans-serif-bold;
+				opacity: 0;
+				animation: slideDown 1s cubic-bezier(0, 0, 0.3, 1) forwards;
+				animation-delay: 0.2s;
+			}
+			&:hover {
+				color: var.$theme-clr;
+			}
+		}
+	}
+}
+
+body.project #nav-desktop ul li:nth-child(3) {
+	color: var.$theme-clr;
+	font-family: var.$font-sans-serif-bold;
+}
+
+@keyframes slideDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.nav-toggle {
+	display: none;
+	background: none;
+	border: none;
+	width: 40px;
+	height: 40px;
+	// Add hamburger icon styles here
+}
+
+#nav-mobile {
+	display: none;
+}
+
+@media (max-width: var.$mobile) {
+	#nav-desktop {
+		display: none;
+	}
+	.nav-toggle {
+		display: block;
+	}
+	#nav-mobile {
+		display: block;
+		// Add mobile nav styles here
+	}
+}
+
+/* =================================
+	 NAV MOBILE
+==================================== */
+.overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(10, 35, 66, 0.92);
+	flex-direction: column;
+	align-items: flex-end;
+	transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 9999;
+	display: none;
+	//opacity: 0;
+	pointer-events: none;
+}
+
+.overlay.active {
+	display: flex;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* Hamburger styles */
+#hamburger {
+	width: 44px;
+	height: 44px;
+	margin: 2rem 2rem 0 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 10001;
+	position: relative;
+	background: none;
+	border: none;
+}
+
+#hamburger span {
+	display: block;
+	height: 4px;
+	width: 32px;
+	background: #fff;
+	margin: 5px 0;
+	border-radius: 2px;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hamburger animation (open state) */
+.overlay.active #hamburger span:nth-child(1) {
+	transform: translateY(9px) rotate(45deg);
+}
+.overlay.active #hamburger span:nth-child(2) {
+	opacity: 0;
+}
+.overlay.active #hamburger span:nth-child(3) {
+	transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile nav styles */
+#nav-mobile {
+	width: 100vw;
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#nav-mobile ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#nav-mobile li {
+	margin: 1.5rem 0;
+}
+
+#nav-mobile a {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+	text-decoration: none;
+	letter-spacing: 0.05em;
+	transition: color 0.2s;
+}
+
+#nav-mobile a.active,
+#nav-mobile a:hover {
+	color: #ff6000;
+}

@@ -1,0 +1,44 @@
+@use 'swiper/css';
+@use 'swiper/css/pagination';
+@use 'variables' as var;
+
+.swiper-intro .swiper-slide {
+	background: #fff;
+}
+
+.swiper.swiper-testimonials {
+	display: grid;
+	max-width: 100%;
+	margin: 3rem auto;
+}
+
+.swiper-testimonials .swiper-slide {
+	background: #fff;
+}
+
+.swiper-testimonials .swiper-pagination {
+	position: relative;
+	padding: 1rem;
+	margin-top: 1rem;
+	//border: 1px red solid;
+}
+
+.swiper-testimonials .swiper-pagination-bullet {
+	background: rgba(38, 38, 45, 0.1);
+	opacity: 1;
+	transition: all 0.3s ease;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.swiper-testimonials .swiper-pagination-bullet-active,
+.swiper-testimonials .swiper-pagination-bullet:hover {
+	background: var.$theme-clr;
+	opacity: 1 !important;
+	transition: all 0.3s ease;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+}

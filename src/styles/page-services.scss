@@ -1,0 +1,65 @@
+@use 'variables.scss' as var;
+
+// #banner {
+// 	background: url('../img/placeholder.jpg') no-repeat center center;
+// 	background-size: cover;
+// 	height: clamp(500px, 65vw, 1100px);
+// 	transition: background-position 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+#services #seo ul {
+	margin-left: 1.5rem;
+	list-style-type: disc;
+	padding-left: 0;
+}
+
+#web-services {
+	padding: 4rem 0;
+}
+
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 2.5rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.service-card {
+	background: #fff;
+	border-radius: 1.5rem;
+	box-shadow: 0 2px 12px rgba(24, 22, 42, 0.07);
+	padding: 2.5rem 2rem 2rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: box-shadow 0.2s, transform 0.2s;
+
+	&:hover {
+		box-shadow: 0 8px 32px rgba(24, 22, 42, 0.13);
+		transform: translateY(-6px) scale(1.03);
+	}
+}
+
+.service-img {
+	width: 64px;
+	height: 64px;
+	margin-bottom: 1.5rem;
+	border-radius: 1rem;
+	background: #f7f9fb;
+	object-fit: contain;
+}
+
+.service-card h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: #18162a;
+}
+
+.service-card p {
+	color: #222;
+	font-size: 1rem;
+	margin: 0;
+}

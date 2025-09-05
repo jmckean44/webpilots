@@ -1,0 +1,109 @@
+@use 'variables.scss' as var;
+
+/* =============================================
+   HEADER
+================================================ */
+header {
+	position: fixed;
+	display: flex;
+	left: 0;
+	right: 0;
+	top: 0;
+	//background: rgba(255, 255, 255, 0.95);
+	padding: 0 clamp(1rem, 3vw, 10%);
+	width: 100%;
+	z-index: 999999999;
+	transition: all 0.5s ease;
+	//border-bottom: 1px #ccc solid;
+}
+
+// .project header {
+// 	background: var.$font-clr;
+// }
+
+#header.pinned {
+	top: 0;
+	transition: all 1s ease;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+#header.unpinned {
+	top: -150px;
+
+	transition: all 0.5s ease;
+}
+
+/* =======================
+	 HEADER SUB CONTAINER
+========================== */
+.header-sub-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	//height: 100%;
+	max-width: var.$container-width;
+	margin: 0 auto;
+	position: relative;
+	transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	//border: 1px red solid;
+}
+
+/* =========================
+	 LOGO DESKTOP
+============================ */
+#logo-desktop {
+	max-width: clamp(80px, 10vw, 130px);
+	//margin-left: 1rem;
+	transition: all 0.5s ease;
+	transform: scale(1) translateX(0);
+	opacity: 1;
+	cursor: pointer;
+	//border: 1px red solid;
+}
+
+/* =========================
+	 LOGO/NAV PINNED
+============================ */
+#header.pinned {
+	height: 70px;
+}
+
+#header.pinned #logo-desktop,
+#header.unpinned #logo-desktop {
+	max-width: 80px;
+}
+
+#header.pinned #nav-desktop ul li a {
+	font-size: 1rem;
+}
+
+/* =======================
+   SKIP NAV
+========================== */
+a.skip-navigation {
+	left: -999px;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	z-index: -999;
+}
+a.skip-navigation:focus,
+a.skip-navigation:active {
+	color: #fff;
+	background-color: #000;
+	left: auto;
+	top: auto;
+	width: 30%;
+	height: auto;
+	overflow: auto;
+	margin: 10px 35%;
+	padding: 5px;
+	border-radius: 15px;
+	border: 4px solid yellow;
+	text-align: center;
+	font-size: 1.2em;
+	z-index: 999;
+}

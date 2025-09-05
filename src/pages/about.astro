@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PictureComponent from '../components/PictureComponent.astro';
+import { Picture } from 'astro:assets';
+import Image from '../img/placeholder.jpg';
+import '../styles/page-about.scss';
+import foosball from '../img/foosball.webp';
+import yosi from '../img/yosi.webp';
+import marissa from '../img/marissa.webp';
+---
+
+<Layout pageTitle="About Web Pilots" pageSiteTitles="">
+	<!-- <PictureComponent mobileImgUrl={imageMobile} desktopImgUrl={image} loading="lazy" className="clip-image" alt="Marina Resort Cavtat" /> -->
+
+	<section id="intro">
+		<div class="container top btm">
+			<div class="flex padding-x align-middle">
+				<div class="cell small-18 medium-11">
+					<h1>About Web Pilots</h1>
+					<p class="txt-lrg">Web Pilots is a small ensemble of like-minded web designers, developers, and SEO professionals with a diverse range of expertise and backgrounds.</p>
+					<p>
+						Even as web technologies evolve and AI continues to transform the industry, the fundamentals of web development largely remain unchanged. Core principles such as clean and semantic HTML,
+						accessible and user-friendly design, performance optimization, and clear communication are still essential.
+					</p>
+					<p>We keep the foundations of the development process in mind - without loosing site of the end goal and what is required to get there.</p>
+					<p>No office. No foosball tables. We cut our lawns at lunch and walk our dogs between zoom meetings.</p>
+				</div>
+				<div class="cell small-18 medium-7">
+					<Picture src={foosball} class="ai-card-img" alt="Uber cool happy office workers playing foosball" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="people">
+		<div class="container top btm">
+			<div class="flex padding-x align-middle">
+				<div class="cell shrink">
+					<Picture src={yosi} class="ai-card-img" alt="Yosi" />
+				</div>
+				<div class="cell auto">
+					<h2 class="title">Yosi Shrem</h2>
+					<h3 class="sub-title">Creative Director & Project Manager</h3>
+					<p class="txt-lrg">A collective of like-minded web designers, developers, SEO, and social media marketing professionals with a diverse range of expertise and backgrounds.</p>
+				</div>
+			</div>
+			<div class="flex padding-x align-middle">
+				<div class="cell auto">
+					<h2 class="title">Marissa McCabe</h2>
+					<h3 class="sub-title">Digital Marketing Specialist & Accounts</h3>
+					<p class="txt-lrg">A collective of like-minded web designers, developers, SEO, and social media marketing professionals with a diverse range of expertise and backgrounds.</p>
+					<p>service, turnaround times</p>
+				</div>
+				<div class="cell shrink">
+					<Picture src={marissa} class="ai-card-img" alt="Marissa" />
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

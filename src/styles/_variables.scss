@@ -1,0 +1,52 @@
+// BREAKPOINTS
+$desktop: 1500px;
+$container-width: 1500px;
+$tablet: 1024px;
+$tablet-sm: 800px;
+$mobile: 700px;
+$mobile-sm: 500px;
+
+// THEME
+$theme-clr: #ff6000;
+$theme-clr-light: #ff7646;
+$theme-clr-dark: #3d3a44;
+$highlight: #00e676;
+
+// LOGO
+$logo-desktop: 120px;
+$logo-tablet: 100px;
+$logo-mobile: 70px;
+
+// FONTS
+$font-sans-serif-reg: 'Barlow-Regular', Helvetica, Arial, sans-serif;
+$font-sans-serif-med: 'Barlow-Medium', Helvetica, Arial, sans-serif;
+$font-sans-serif-med-italic: 'Barlow-Medium-Italic', Helvetica, Arial, sans-serif;
+$font-sans-serif-semibold: 'Barlow-SemiBold', Helvetica, Arial, sans-serif;
+$font-sans-serif-semibold-italic: 'Barlow-SemiBold-Italic', Helvetica, Arial, sans-serif;
+$font-sans-serif-bold: 'Barlow-Bold', Helvetica, Arial, sans-serif;
+$font-sans-serif-bold-italic: 'Barlow-Bold-Italic', Helvetica, Arial, sans-serif;
+$font-serif: 'MinionPro-Regular', Times New Roman, Times, serif;
+$theme-font: 'Barlow-Regular', sans-serif;
+$font-clr: $theme-clr-dark;
+$font-clr-dark: #fff;
+$transition-time: all ease 0.5s;
+
+// HEADER
+$header-height-desktop: 90px;
+$header-height-tablet: 75px;
+$header-height-mobile: 60px;
+$header-bg-clr: rgba(255, 255, 255, 0.9);
+
+// FOOTER
+$footer-bg-clr: #f9f9f9;
+
+/* GAPS */
+$gap-sm: 1.5em;
+$gap-med: 2em;
+$gap-lrg: 2.5em;
+$gap-xlrg: 3em;
+
+// BORDERS
+$bdr-radius-lrg: 10px;
+$bdr-radius-med: 5px;
+$bdr-radius-sm: 2px;

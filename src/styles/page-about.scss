@@ -1,0 +1,243 @@
+@use 'variables.scss' as var;
+
+// #banner {
+// 	background: url('../img/placeholder.jpg') no-repeat center center;
+// 	background-size: cover;
+// 	height: clamp(500px, 65vw, 1100px);
+// 	transition: background-position 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+#people img {
+	max-width: 400px;
+}
+
+#people .flex {
+	margin: 0 auto 4rem;
+}
+
+/* ====================
+	 PRICING
+======================= */
+#pricing {
+	padding: 2rem 0;
+	position: relative;
+	text-align: left;
+}
+.pricing-subtitle {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var.$theme-clr;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+.pricing-title {
+	font-size: 2.2rem;
+	margin-bottom: 2.5rem;
+}
+.pricing-cta {
+	position: absolute;
+	right: 2rem;
+	top: 1.5rem;
+	background: var.$font-clr;
+	color: #fff;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 0.75rem 2rem;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1.1rem;
+	letter-spacing: 0.05em;
+	transition: background 0.2s;
+}
+.pricing-cta:hover {
+	background: var.$theme-clr;
+}
+
+.pricing-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.pricing-card {
+	background: #f9f9f9;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 2.5rem 2rem 2rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 480px;
+	position: relative;
+}
+
+.pricing-card a {
+	color: #fff;
+}
+
+.pricing-card h4 {
+	font-size: 1.5rem;
+	margin-bottom: 1.2rem;
+	text-transform: uppercase;
+}
+
+.pricing-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.5rem 0;
+	width: 100%;
+}
+.pricing-card li {
+	font-size: 1rem;
+	margin-bottom: 0.3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.pricing-card .check {
+	color: #1ec773;
+	font-size: 1.2em;
+	margin-left: 0.5em;
+}
+.pricing-card .cross {
+	color: #bbb;
+	font-size: 1.2em;
+	margin-left: 0.5em;
+}
+.pricing-card .price {
+	font-size: 2.2rem;
+	font-weight: 700;
+	margin-bottom: 1.2rem;
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+.pricing-card .note {
+	font-size: 1rem;
+	color: var.$theme-clr;
+	font-weight: 400;
+}
+.pricing-card.featured {
+	color: #fff;
+	background: var.$font-clr;
+}
+.pricing-card.featured h4 {
+	color: #fff;
+}
+.card-cta {
+	background: var.$theme-clr;
+
+	border-radius: var.$bdr-radius-sm;
+	padding: 0.75rem 2rem;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1.1rem;
+	margin-top: auto;
+	transition: background 0.2s;
+	display: inline-block;
+}
+
+.card-cta a {
+	background: var.$font-clr;
+	color: #fff;
+}
+
+.card-cta:hover {
+	background: var.$theme-clr;
+}
+
+/* ====================
+	 OFFER
+======================= */
+.offer {
+	padding: 3rem 0;
+}
+.offer-grid {
+	display: grid;
+	grid-template-columns: 1fr 1.2fr;
+	gap: 2.5rem;
+	align-items: center;
+}
+.offer-photo {
+	position: relative;
+	border-radius: var.$bdr-radius-lrg;
+	overflow: hidden;
+	min-width: 320px;
+	max-width: 420px;
+}
+.offer-photo img {
+	width: 100%;
+	display: block;
+	border-radius: var.$bdr-radius-lrg;
+}
+.offer-badge {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 1.5rem;
+	background: #fff;
+	color: var.$font-clr;
+	padding: 0.75rem 1.5rem;
+	border-radius: 0.75rem;
+	font-size: 1rem;
+	font-weight: 700;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.badge-icon {
+	margin-left: 0.5rem;
+	font-size: 1.2em;
+}
+.offer-content {
+	max-width: 700px;
+}
+.offer-subtitle {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var.$theme-clr;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+.offer-title {
+	font-size: 2.2rem;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 700;
+	margin-bottom: 1.2rem;
+}
+.offer-desc {
+	font-size: 1.1rem;
+	margin-bottom: 1.5rem;
+}
+.offer-features {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.2rem 2rem;
+	margin-bottom: 2rem;
+}
+.feature {
+	font-size: 1rem;
+	color: var.$font-clr;
+	line-height: 1.4;
+}
+.feature-icon {
+	color: #3bb6ff;
+	margin-right: 0.5em;
+	font-size: 1.2em;
+}
+.offer-cta {
+	display: inline-block;
+	background: var.$font-clr;
+	color: #fff;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 0.9rem 2.2rem;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1.1rem;
+	letter-spacing: 0.05em;
+	transition: background 0.2s;
+}
+.offer-cta:hover {
+	background: var.$theme-clr;
+}

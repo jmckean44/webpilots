@@ -1,0 +1,48 @@
+@use 'variables.scss' as var;
+
+/* reset */
+button {
+	all: unset;
+}
+
+.CheckboxRoot {
+	background-color: #ccc;
+	width: 19px;
+	height: 19px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	transition: 0.3s ease all;
+	cursor: pointer;
+}
+.CheckboxRoot:hover {
+	background-color: var.$theme-clr;
+}
+.CheckboxRoot:checked {
+	background-color: var.$theme-clr;
+}
+.CheckboxRoot:focus {
+	box-shadow: 0 0 5px #bababa;
+	transition: box-shadow 0.2s, border-color 0.2s ease-in-out;
+}
+
+.checkboxesContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.checkboxesContainer .Label {
+	margin-bottom: 0;
+	display: none;
+}
+
+.CheckboxIndicator {
+	width: 19px;
+	height: 19px;
+	border-radius: 3px;
+	background-color: pink;
+	color: black;
+}

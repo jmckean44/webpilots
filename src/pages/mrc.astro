@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PictureComponent from '../components/PictureComponent.astro';
+import { Picture } from 'astro:assets';
+import { Image }  from 'astro:assets';
+import flipbook1 from '../img/flipbook-1.webp';
+import flipbook2 from '../img/flipbook-2.webp';
+import flipbook3 from '../img/flipbook-3.webp';
+import flipbook4 from '../img/flipbook-4.webp';
+import flipbook5 from '../img/flipbook-5.webp';
+import mobileMask from '../img/mask-mobile.webp';
+import mobile from '../img/mrc-mobile.webp';
+import tablet from '../img/mask-tablet.webp';
+import laptop from '../img/mask-laptop.webp';
+import '../styles/page-work.scss';
+import '../styles/swiper.scss';
+---
+
+<Layout pageTitle="Marina Resort Cavtat" pageSiteTitles="Web Pilots Services">
+
+	<section id="intro">
+		<div class="container top">
+			<div class="flex padding-x align-middle">
+				<div class="cell small-18 medium-9">
+					<h1>Marina Resort Cavtat</h1>
+					<p class="txt-lrg">Marina Resort Cavtat is an up and coming resort in Croatia. </p>
+					<p class="justify">
+						I was asked to create a multilingual registration page (full site is coming soon), which has generated over 10,000 leads internationally, to date. Astro JS was a good solution for performance, SEO, and accessibility. A Picture Component renders modern image versions. Videos have desktop and mobile versions and load using the Intersection Observer API. The forms submit to Salesforce Marketing Cloud for lead management.
+					</p>
+					
+					<p>more......</p>
+				</div>
+				<div class="cell small-18 medium-9" id="devices">fsefsdfs</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="intro">
+		<div class="container top">
+			<div class="flex padding-x align-middle">
+				<div class="cell small-18">
+					<h1>Marina Resort Cavtat</h1>
+					<p class="txt-lrg">Marina Resort Cavtat is an up and coming resort in Croatia. </p>
+					<p class="justify">
+						saasdasd
+					</p>	
+
+					<div id="devices" class="flex align-center justify-center">
+						<div class="mobile device-container">
+							<Image src={mobileMask} class="mask" alt="Mobile image mask" />
+							<Image src={mobile} class="scroll" alt="Mobile device" />
+						</div>
+						<!-- <div class="tablet device-container">
+							<Image src={tablet} class="mask" alt="Tablet image mask" />
+							<Image src={tablet} class="scroll device-hidden" alt="Tablet device" />
+						</div>
+						<div class="laptop device-container">
+							<Image src={laptop} class="mask" alt="Laptop image mask" />
+							<Image src={laptop} class="scroll device-hidden" alt="Laptop device" />
+						</div> -->
+					</div>
+
+
+				
+				</div>
+				<div class="cell small-18">gdgdfgdf</div>			
+			</div>
+		</div>
+	</section>
+
+
+	<section id="flipbook">
+		<div class="container top btm">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<h2 class="title">Marketing Materials</h2>
+					<h2 class="sub-title">Flipbook Brochure</h2>
+					<p class="txt-lrg">As part of the marketing materials to be available for the sales team, we were asked to create a Flipbook brochure for potential buyers and investors to 	 </p>
+
+</div>
+					<div class="cell small-18 medium-9"></div>
+					<div class="cell small-18">	
+<p class="margin-btm-lrg">
+					<a 
+						href="https://www.flipsnack.com/6C9F85AA9F7/marina-resort-cavtat-ebook/full-view.html" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="underline"
+					>
+						View Flipbook Brochure
+					</a>
+</p>
+
+					<div class="swiper swiper-intro">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+							<Image src={flipbook1} alt="Marina Resort Cavtat Flipbook" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={flipbook2} alt="Marina Resort Cavtat Flipbook" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={flipbook3} alt="Marina Resort Cavtat Flipbook" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={flipbook4} alt="Marina Resort Cavtat Flipbook" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={flipbook5} alt="Marina Resort Cavtat Flipbook" />
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+</Layout>
+
+<script src="../scripts/swiper-projects.js"></script>
