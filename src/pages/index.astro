@@ -4,8 +4,6 @@ import PictureComponent from '../components/PictureComponent.astro';
 import { Image, Picture } from 'astro:assets';
 import '../styles/page-home.scss';
 import '../styles/swiper.scss';
-import placeholder from '../img/placeholder.jpg';
-import placeholderMobile from '../img/placeholder.jpg';
 import mobile from '../img/icon-mobile.svg';
 import responsive from '../img/icon-responsive.svg';
 import performance from '../img/icon-performance.svg';
@@ -15,6 +13,9 @@ import mrc from '../img/mrc-sm.webp';
 import no7dale from '../img/no7dale-sm.webp';
 import shiupong from '../img/shiupong-sm.webp';
 import cleanrooms from '../img/cleanrooms-sm.webp';
+import wordpress from '../img/logo-wordpress.svg';
+import wix from '../img/logo-wix.svg';
+import webflow from '../img/logo-webflow.svg';
 ---
 
 <Layout pageTitle="description" pageSiteTitles="">
@@ -36,12 +37,12 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 							</div>
 							<div class="swiper-slide">
 								<h1>
-									A <em class="theme-clr">refreshing approach</em> to the web development process.
+									<span>A <em class="theme-clr">refreshing approach</em> to the web development process.</span>
 								</h1>
 							</div>
 							<div class="swiper-slide">
 								<h1>
-									Simplifying the <em class="theme-clr">complicated</em>.
+									<span>Simplifying the <em class="theme-clr">complicated</em>.</span>
 								</h1>
 							</div>
 						</div>
@@ -56,10 +57,130 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 					With years of experience navigating evolving web technologies, <strong>Web Pilots</strong> delivers the right strategies for an <strong>improved online presence</strong>.
 				</p>
 				<p class="txt-lrg">
-					Benefit from expert <strong>web design</strong> and <strong>development, </strong> tailored local <strong><a href="#services" class="underline">SEO</a></strong>, and social media marketing and analytics without the agency price tag.
+					Benefit from expert <strong>web design</strong> and <strong>development, </strong> tailored local <strong><a href="#services" class="underline">SEO</a></strong>, and social media marketing
+					and analytics without the agency price tag.
 				</p>
 				<p class="txt-lrg margin-btm-lrg">Get measurable results that drive real growth.</p>
 				<button class="btn"><a href="/contact/" role="link" aria-label="link to PORTFOLIO page">Start Your Project</a></button>
+			</div>
+		</div>
+	</section>
+
+	<section id="build-types">
+		<div class="container top btm">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-10">
+					<h2 class="title">Multi-Platform Build Types</h2>
+					<h3 class="sub-title theme-clr">Professional Design & Development</h3>
+					<p>
+						We specialize in website build types to suit your needs, from custom-coded <span class="highlight">Javascript bundlers</span> for superior performance, customized <span class="highlight"
+							>WordPress themes <span class="highlight">Web Builders</span> like Webflow and Wix.behind the page
+						</span>
+					</p>
+					<p>Our team handles the technical aspects of design, development, deployment, and updates, so you can focus on growing your business with confidence.</p>
+				</div>
+				<div class="cell small-18 medium-8" id="logos">
+					<div class="trig-parallax-left enable-trig" data-trig-var="true">
+						<Image src={wordpress} class="trig-target" alt="Wordpress logo" />
+					</div>
+					<div class="trig-parallax-down enable-trig" data-trig-var="true">
+						<Image src={wix} class="trig-target" alt="Wix logo" />
+					</div>
+					<div class="trig-parallax-up enable-trig" data-trig-var="true">
+						<Image src={webflow} class="trig-target" alt="Webflow logo" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="seo">
+		<div class="container top trig-fade-up enable-trig" data-trig-var="true">
+			<div class="seo-header trig-fade-up enable-trig" data-trig-var="true">
+				<svg class="lighthouse-bg trig-target" width="120" height="120" role="img" aria-label="Lighthouse score animation" viewBox="0 0 120 120">
+					<rect x="0" y="0" width="120" height="120" fill="#3d3a44" opacity="0"></rect>
+					<circle cx="60" cy="60" r="54" stroke="#5a5763" stroke-width="12" fill="none"></circle>
+					<circle class="lighthouse-progress" cx="60" cy="60" r="54" stroke="#00e676" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="339.292" stroke-dashoffset="339.292"
+					></circle>
+					<text id="lighthouse-score" x="60" y="68" text-anchor="middle" font-size="2rem" font-family="Barlow-SemiBold, Arial, sans-serif" fill="#00e676" font-weight="bold">0%</text>
+				</svg>
+				<div class="content">
+					<h2 class="title">SEO Best Practices</h2>
+					<p>
+						I follow <strong>standard technical SEO best practices</strong>, taking a comprehensive approach to website optimization. This includes maximizing page load speed through image and code
+						optimization, leveraging browser caching, and minimizing server response times. Asynchronous loading of scripts and resources is implemented to prevent render-blocking and improve user
+						experience.
+					</p>
+					<p>
+						Additional technical enhancements such as responsive design, semantic HTML, accessibility improvements, and structured data are applied to ensure that websites are not only fast and
+						accessible, but also easily discoverable and indexable by search engines. The strategies below work together to create a high-performing, user-friendly, and search-optimized web presence.
+					</p>
+				</div>
+			</div>
+			<div class="seo-cards-container">
+				<div class="seo-card responsive trig-target" style="--trig-delay: .2s; ">
+					<div class="service-icon">
+						<Image src={responsive} alt="Fully Responsive icon" />
+					</div>
+					<h3>Responsive Design</h3>
+					<ul>
+						<li>Responsive layouts with flexible grids</li>
+						<li>Media queries for defining layout behaviour and breakpoints between, desktop, tablet, and mobile</li>
+						<li>Flexible images and media</li>
+						<li>Adaptive navigation</li>
+						<li>Readable font sizes and sufficient line spacing</li>
+						<li>Viewport units for responsive typography</li>
+						<li>Touch-friendly targets for easy tapping</li>
+						<li>Real device testing: <a href="https://www.browserstack.com/" target="_blank" class="underline" role="link" aria-label="offsite link to BrowserStack">BrowserStack</a></li>
+						<li>Minimize Cumulative Layout Shift</li>
+						<li>Prioritize and reorder essential content</li>
+						<li>Maintain appropriate margins and padding at all breakpoints</li>
+						<li>Optimize assets and code for fast loading on all devices</li>
+					</ul>
+				</div>
+				<div class="seo-card performance trig-target" style="--trig-delay: .4s; ">
+					<div class="service-icon">
+						<Image src={performance} alt="performance Page load Icon" />
+					</div>
+					<h3>Performance</h3>
+					<ul>
+						<li>Optimized images with modern formats like WebP/AVIF and fallbacks</li>
+						<li>Implement lazy loading for images and videos</li>
+						<li>Minify and bundle CSS and JavaScript files</li>
+						<li>Implement code splitting and tree shaking</li>
+						<li>Defer or async non-critical JavaScript</li>
+						<li>Real device testing</li>
+						<li>Asynchronous loading for scripts and resources</li>
+						<li>Optimize Core Web Vitals (LCP, FID, CLS)</li>
+						<li>Use Content Delivery Networks (CDN) when applicable</li>
+						<li>Minimize HTTP requests</li>
+						<li>
+							Performance checks: Lighthouse, <a href="https://pagespeed.web.dev/" target="_blank" class="underline" role="link" aria-label="offsite link to PageSpeed Insights">PageSpeed Insights</a>
+						</li>
+					</ul>
+				</div>
+				<div class="seo-card seo trig-target" style="--trig-delay: .6s; ">
+					<div class="service-icon">
+						<Image src={seo} alt="SEO Icon" />
+					</div>
+					<h3>SEO</h3>
+					<ul>
+						<li>Keyword research</li>
+						<li>Descriptive and internal links</li>
+						<li>Implement Schema markup, structured data</li>
+						<li>Optimizing site speed for leveraging browser caching</li>
+						<li>XML sitemaps for efficient crawling and indexing</li>
+						<li>
+							<a href="https://search.google.com/search-console/about" target="_blank" class="underline" role="link" aria-label="offsite link to Google Search Console">Google Search Console</a> checks
+						</li>
+						<li>Canonical tags to prevent duplicate content issues</li>
+						<li>Improving Core Web Vitals for LCP and Cumulative Layout Shift</li>
+						<li>Semantic HTML, proper heading structure and naming conventions</li>
+						<li>Ensure accessibility (color contrast, ARIA labels, keyboard navigation)</li>
+						<li>Configuring server-side redirects</li>
+						<li>Open Graph/Twitter Card meta tags</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -78,13 +199,10 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 					<h2 class="title">Services</h2>
 					<h3 class="sub-title theme-clr">Standard Best Practices</h3>
 					<p>
-						We manage what goes on <span class="highlight">behind the page</span>
-						so that your site functions as expected, ensuring every detail is optimized for speed, accessibility, and does a secret handshake with <span class="highlight">Google’s algorithm</span> for better search
-						engine visibility.
+						We ensure your website looks and works perfectly on all mobile devices and manage what goes on <span class="highlight">behind the page</span> so that your site functions as expected, ensuring
+						every detail is optimized for speed, accessibility, and does a secret handshake with <span class="highlight">Google’s algorithm</span> for better search engine visibilit.
 					</p>
-					<p class="margin-btm-lrg">
-						Our team handles the technical aspects of design, development, deployment, and updates, so you can focus on growing your business with confidence.
-					</p>
+					<p class="margin-btm-lrg">Our team handles the technical aspects of design, development, deployment, and updates, so you can focus on growing your business with confidence.</p>
 					<p class="link"><a href="/work/" class="slide-right">See Our Work &rarr;</a></p>
 				</div>
 			</div>
@@ -148,8 +266,8 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 
 			<div class="flex padding-x intro-text">
 				<div class="cell small-18 medium-18 large-9">
-					<p class="justify">We have partnered with small business owners across the GTA to deliver the websites they’ve always envisioned.</p>
-					<p class="justify margin-btm-med">
+					<p class="justify white-txt">We have partnered with small business owners across the GTA to deliver the websites they’ve always envisioned.</p>
+					<p class="justify margin-btm-med white-txt">
 						When you choose <strong>Web Pilots</strong>, you’re hiring a small business that pays attention to the details.
 					</p>
 				</div>
@@ -169,7 +287,7 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 						<a href="/mrc/" role="link" aria-label="link to Marina Resort Cavtat project">Project</a>
 					</p>
 				</div>
-				<div class="portfolio-card trig-target" style="--trig-delay: .5s; ">
+				<div class="portfolio-card trig-target" style="--trig-delay: .25s; ">
 					<a target="_blank" href="https://7dale.com" role="link" aria-label="offsite link to No 7 Rosedale site"><Image src={no7dale} alt="No 7 Rosedale" /></a>
 					<h3>No 7 Rosedale</h3>
 					<a target="_blank" href="https://7dale.com" class="url underline" role="link" aria-label="offsite link to 7dale.com">7dale.com</a>
@@ -179,7 +297,7 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 						<a href="work/#no7dale" role="link" aria-label="link to No 7 Rosedale project" class="portfolio-btn">Project</a>
 					</p>
 				</div>
-				<div class="portfolio-card trig-target" style="--trig-delay: 1s; ">
+				<div class="portfolio-card trig-target" style="--trig-delay: .5s; ">
 					<a target="_blank" href="https://shiupong.com/" role="link" aria-label="offsite link to Shiu Pong Group"><Image src={shiupong} alt="Shiupong Group" /></a>
 					<h3>Shiu Pong Group</h3>
 					<a target="_blank" href="https://shiupong.com/" class="url underline" role="link" aria-label="offsite link to shiupong.com">shiupong.com</a>
@@ -189,7 +307,7 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 						<a href="https://shiupong.com/" class="portfolio-btn" role="link" aria-label="link to Shiu Pong Group project">Project</a>
 					</p>
 				</div>
-				<div class="portfolio-card trig-target" style="--trig-delay: 1.5s; ">
+				<div class="portfolio-card trig-target" style="--trig-delay: .75s; ">
 					<a target="_blank" href="https://www.cleanroomsplus.ca/" role="link" aria-label="offsite link to Clean Rooms Plus"><Image src={cleanrooms} alt="Clean Rooms Plus" /></a>
 					<h3>Clean Rooms Plus</h3>
 					<a target="_blank" href="https://www.cleanroomsplus.ca/" class="url underline" role="link" aria-label="offsite link to cleanroomsplus.ca">cleanroomsplus.ca</a>
@@ -204,15 +322,15 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 	</section>
 
 	<section id="testimonials">
-		<div class="container btm">
+		<div class="container top btm">
 			<div class="flex padding-x align-middle">
 				<div class="cell small-18 medium-9">
 					<h2 class="title">Testimonials</h2>
 					<h3 class="sub-title">A Few Words From Our Clients</h3>
 					<p>
-						We’ve partnered with small business owners across the GTA to deliver the websites they’ve always envisioned. Our commitment to our clients matches their dedication to their businesses.</p>
-						<p class="margin-btm-med">When you choose Web Pilots, you’re also hiring a small business that pays attention to all details, large and small.
+						We’ve partnered with small business owners across the GTA to deliver the websites they’ve always envisioned. Our commitment to our clients matches their dedication to their businesses.
 					</p>
+					<p class="margin-btm-med">When you choose Web Pilots, you’re also hiring a small business that pays attention to all details, large and small.</p>
 				</div>
 				<div class="cell small-18 medium-9">
 					<Image src={testimonials} alt="testimonials Icon" />
@@ -228,49 +346,47 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 							landing page that has been the source of over 10,000 leads internationally to date. <span class="quote btm">&rdquo;</span>
 						</p>
 						<div class="author">
-							<strong>Lovro Baldani</strong><br />	
-<em>Sales & Marketing Manager</em>	<br />					
+							<strong>Lovro Baldani</strong><br />
+							<em>Sales & Marketing Manager</em>
+							<br />
 							<span><a target="_blank" href="https://marinaresortcavtat.com/" class="underline" role="link" aria-label="offsite link to marinaresortcavtat.com">marinaresortcavtat.com</a></span>
 						</div>
 					</div>
 					<div class="swiper-slide">
-											<p>
-												<span class="quote top">&rdquo;</span>
-													Web Pilots and the team built us a landing page and then our full website for lead generation for our Riverscape residential community project in Wasaga Beach, which has generated over 4,000 subscribers with the help of our social media campaigns. It's been a great success :) <span
-													class="quote btm">&rdquo;</span
-												>
-											</p>
-											<div class="author">
-												<strong>Mark Chan</strong><br />
-					<em>President & Owner, Upperview Homes</em><br>
-					<span><a target="_blank" href="https://riverscape.ca/" class="underline" role="link" aria-label="offsite link to riverscape.ca">riverscape.ca</a></span>
-					</em>											
-											</div>
-										</div>
+						<p>
+							<span class="quote top">&rdquo;</span>
+							Web Pilots and the team built us a landing page and then our full website for lead generation for our Riverscape residential community project in Wasaga Beach, which has generated over 4,000
+							subscribers with the help of our social media campaigns. It's been a great success :) <span class="quote btm">&rdquo;</span>
+						</p>
+						<div class="author">
+							<strong>Mark Chan</strong><br />
+							<em>President & Owner, Upperview Homes</em><br />
+							<span><a target="_blank" href="https://riverscape.ca/" class="underline" role="link" aria-label="offsite link to riverscape.ca">riverscape.ca</a></span>
+						</div>
+					</div>
 					<div class="swiper-slide">
 						<p>
 							<span class="quote top">&rdquo;</span>
-							Jeff made the process of building our WordPress theme easy, straightforward, and perfect for us to manage our own content. Our site functions great, is responsive, user friendly, and
-							they are a pleasure to work with.<span class="quote btm">&rdquo;</span>
+							Jeff made the process of building our WordPress theme easy, straightforward, and perfect for us to manage our own content. Our site functions great, is responsive, user friendly, and they
+							are a pleasure to work with.<span class="quote btm">&rdquo;</span>
 						</p>
 						<div class="author">
 							<strong>Mike Giamou</strong><br />
-<em>Co-Founder & Vice President</em>	<br />
+							<em>Co-Founder & Vice President</em>
+							<br />
 							<span><a target="_blank" href="https://giapm.ca/" class="underline" role="link" aria-label="offsite link to giapm.ca">giapm.ca</a></span>
 						</div>
 					</div>
 					<div class="swiper-slide">
 						<p>
 							<span class="quote top">&rdquo;</span>
-							We just had a redesign of our corporate site and are very pleased with the new look and how well the site is performing. Web Pilots are always accessible and made the process as easy as it was for our previous website. <span
-								class="quote btm">&rdquo;</span
-							>
+							We just had a redesign of our corporate site and are very pleased with the new look and how well the site is performing. Web Pilots are always accessible and made the process as easy as it
+							was for our previous website. <span class="quote btm">&rdquo;</span>
 						</p>
 						<div class="author">
 							<strong>Carmen Cheung</strong><br />
-<em>National Account Manager</em><br />
-<span><a target="_blank" href="https://shiupong.com" class="underline" role="link" aria-label="offsite link to shiupong.com">shiupong.com</a></span>
-							
+							<em>National Account Manager</em><br />
+							<span><a target="_blank" href="https://shiupong.com" class="underline" role="link" aria-label="offsite link to shiupong.com">shiupong.com</a></span>
 						</div>
 					</div>
 				</div>
@@ -281,59 +397,58 @@ import cleanrooms from '../img/cleanrooms-sm.webp';
 
 	<script src="../scripts/swiper-intro.js"></script>
 	<script src="../scripts/swiper-testimonials.js"></script>
-</Layout>
 
-<script is:inline>
-	document.addEventListener('astro:page-load', () => {
-		const lighthouseSvgs = document.querySelectorAll('.lighthouse-bg');
+	<script is:inline>
+		document.addEventListener('astro:page-load', () => {
+			const lighthouseSvgs = document.querySelectorAll('.lighthouse-bg');
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('in-view');
-						// Animate the number
-						const text = entry.target.querySelector('#lighthouse-score');
-						if (text && !text.dataset.animated) {
-							animateScore(text, 98); // Set your target score here
-							text.dataset.animated = 'true';
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('in-view');
+							// Animate the number
+							const text = entry.target.querySelector('#lighthouse-score');
+							if (text && !text.dataset.animated) {
+								animateScore(text, 98); // Set your target score here
+								text.dataset.animated = 'true';
+							}
+						} else {
+							entry.target.classList.remove('in-view');
+							// Optionally reset the number
+							const text = entry.target.querySelector('#lighthouse-score');
+							if (text) {
+								text.textContent = '0%';
+								delete text.dataset.animated;
+							}
 						}
+					});
+				},
+				{ threshold: 0.3 }
+			);
+
+			lighthouseSvgs.forEach((svg) => observer.observe(svg));
+
+			function animateScore(element, target) {
+				let current = 0;
+				const duration = 2000;
+				const start = performance.now();
+
+				function update(now) {
+					const progress = Math.min((now - start) / duration, 1);
+					const value = Math.floor(progress * target);
+					element.textContent = value + '%';
+					if (progress < 1) {
+						requestAnimationFrame(update);
 					} else {
-						entry.target.classList.remove('in-view');
-						// Optionally reset the number
-						const text = entry.target.querySelector('#lighthouse-score');
-						if (text) {
-							text.textContent = '0%';
-							delete text.dataset.animated;
-						}
+						element.textContent = target + '%';
 					}
-				});
-			},
-			{ threshold: 0.3 }
-		);
-
-		lighthouseSvgs.forEach((svg) => observer.observe(svg));
-
-		function animateScore(element, target) {
-			let current = 0;
-			const duration = 2000;
-			const start = performance.now();
-
-			function update(now) {
-				const progress = Math.min((now - start) / duration, 1);
-				const value = Math.floor(progress * target);
-				element.textContent = value + '%';
-				if (progress < 1) {
-					requestAnimationFrame(update);
-				} else {
-					element.textContent = target + '%';
 				}
+				requestAnimationFrame(update);
 			}
-			requestAnimationFrame(update);
-		}
 
-		// Usage:
-		animateScore(document.getElementById('lighthouse-score'), 98);
-	});
-</script>
-
+			// Usage:
+			animateScore(document.getElementById('lighthouse-score'), 98);
+		});
+	</script>
+</Layout>

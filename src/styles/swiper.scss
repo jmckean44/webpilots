@@ -6,10 +6,15 @@
 	background: #fff;
 }
 
+#home .swiper-intro .swiper-slide {
+	background: transparent;
+}
+
 .swiper.swiper-testimonials {
 	display: grid;
 	max-width: 100%;
 	margin: 3rem auto;
+	padding-bottom: 5rem;
 }
 
 .swiper-testimonials .swiper-slide {
@@ -17,9 +22,10 @@
 }
 
 .swiper-testimonials .swiper-pagination {
-	position: relative;
+	//position: relative;
 	padding: 1rem;
-	margin-top: 1rem;
+	margin-bottom: -1rem;
+	width: 100%;
 	//border: 1px red solid;
 }
 

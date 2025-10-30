@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Form from '../components/Form';
 import '../styles/form.scss';
 ---
 
@@ -12,36 +13,7 @@ import '../styles/form.scss';
 						<p class="justify width">To send a message, please fill out and submit the form below.</p>
 
 						<br />
-
-						<form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" data-astro-reload novalidate>
-							<input type="hidden" name="access_key" value="3d4e1ccc-77f5-4fa8-860c-81854fd38d03" />
-							<input type="checkbox" class="hidden" style="display:none" name="botcheck" />
-							<input type="hidden" name="subject" value="Submission from jmckean44.netlify.app" />
-
-							<div>
-								<label for="fname" class="visually-hidden">First Name</label>
-								<input type="text" name="name" id="first_name" placeholder="Name" required="" />
-								<span class="helperText">Name</span>
-								<div class="empty-feedback invalid-feedback">Please provide your first name</div>
-							</div>
-
-							<div>
-								<label for="email" class="visually-hidden">Email</label>
-								<input type="email" name="email" id="email_address" placeholder="Email *" required />
-								<span class="helperText">Email</span>
-								<div class="empty-feedback text-red-400 text-sm mt-1">Please provide your email address</div>
-								<div class="invalid-feedback text-red-400 text-sm mt-1">Please provide a valid email address</div>
-							</div>
-							<div>
-								<label for="message" class="visually-hidden">Comments</label>
-								<textarea rows="10" name="message" id="message" placeholder="Comments"></textarea>
-								<span class="helperText">Comments</span>
-							</div>
-
-							<div class="h-captcha" data-theme="dark" data-captcha="true"></div>
-							<div id="result"></div>
-							<button type="submit" class="btn">SUBMIT</button>
-						</form>
+						<Form />
 					</div>
 				</div>
 			</div>

@@ -1,19 +1,22 @@
 import Swiper from 'swiper';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import 'swiper/scss';
-import 'swiper/css/effect-fade';
+import 'swiper/scss/effect-fade';
 import 'swiper/scss/autoplay';
 import 'swiper/scss/pagination';
 
 document.addEventListener('astro:page-load', () => {
-	const swiper = new Swiper('.swiper-testimonials', {
+	const container = document.querySelector('.swiper-testimonials');
+	if (!container) return; // Prevent errors if not found
+
+	const swiper = new Swiper(container, {
 		modules: [Autoplay, EffectFade, Pagination],
 		spaceBetween: 30,
 		slidesPerView: 3,
 		speed: 1000,
 		autoHeight: false,
 		autoplay: {
-			delay: 60000,
+			delay: 5000, // More typical delay
 			disableOnInteraction: false,
 		},
 		loop: true,
@@ -33,5 +36,5 @@ document.addEventListener('astro:page-load', () => {
 			},
 		},
 	});
-	document.querySelector('.swiper-hero').swiper = swiper;
+	container.swiper = swiper;
 });

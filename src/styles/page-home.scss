@@ -11,8 +11,7 @@
 	text-align: center;
 	max-width: 1000px;
 	margin: 3rem auto;
-	padding: 0 1.5rem;
-	//border: 1px red solid;
+	padding: 50px 1.5rem 0;
 }
 
 /* ====================
@@ -211,7 +210,7 @@
 	justify-content: space-between;
 	min-height: 50px;
 	position: relative;
-	background: #f9f9f9;
+	background: var.$font-clr;
 	border-radius: var.$bdr-radius-med;
 	padding: 2.5rem 2rem 2rem 2rem;
 	transition: all ease 0.3s;
@@ -229,23 +228,19 @@
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	transition: all ease 0.3s;
-	color: var.$font-clr;
+	color: var.$highlight;
 }
 
 .service-card:hover h2 {
-	color: var.$highlight;
-	transition: all ease 0.3s;
-}
-
-.service-card:hover p {
 	color: #fff;
-	z-index: 9;
 	transition: all ease 0.3s;
 }
 
 .service-card p {
+	color: #fff;
 	font-size: 1.1rem;
 	margin-bottom: 2rem;
+	z-index: 9;
 	transition: all ease 0.3s;
 }
 
@@ -253,6 +248,10 @@
 	margin-top: auto;
 	margin-bottom: 0;
 	font-size: 1rem;
+}
+
+.service-card p.link a {
+	color: var.$highlight;
 }
 
 .service-card p.link a:hover {
@@ -331,6 +330,78 @@
 }
 
 /* =======================
+	 DESIGN
+========================== */
+
+#build-types {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	transition: all ease 0.3s;
+}
+
+#build-types .flex {
+	background: var.$complimentary;
+	padding: 8rem 3rem;
+	border-radius: var.$bdr-radius-lrg;
+	color: #fff;
+	width: 100%;
+	position: relative;
+}
+
+#build-types .cell {
+	border: 1px red solid;
+}
+
+#build-types #logos img {
+	max-width: 150px;
+}
+
+#build-types .left {
+	background: #f7f7f7;
+	padding: 2rem;
+}
+
+#build-types .header .content {
+	position: relative;
+	max-width: 50%;
+	z-index: 3;
+}
+
+#build-types .header .content .title {
+	color: var.$highlight;
+}
+
+#build-types .header .content .sub-title,
+#build-types .header .content p {
+	color: #fff;
+}
+
+#build-types .header .content p.link {
+	margin-top: auto;
+}
+
+#build-types .header .content p a {
+	color: var.$highlight;
+}
+
+#build-types .service-cards-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+	align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+	#build-types .service-cards-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* =======================
 	 SERVICES LIGHTHOUSE
 ========================== */
 .lighthouse-bg {
@@ -404,7 +475,11 @@
 	 PORTFOLIO
 ======================= */
 #portfolio {
+	padding: 8rem 0 10rem;
 	margin: 150px 0;
+	background: var.$complimentary;
+	color: #fff;
+	margin-bottom: 1.5rem;
 }
 
 .portfolio {
@@ -428,8 +503,8 @@
 	justify-content: space-between;
 }
 
-.portfolio-card h3 {
-	font-size: 1.4rem;
+#portfolio h3.sub-title {
+	color: #fff;
 	text-align: left;
 	margin-bottom: 0.5rem;
 }
@@ -550,4 +625,127 @@
 	font-size: 1rem;
 	font-weight: 400;
 	color: var.$font-clr;
+}
+
+.project-showcase {
+	background: #ededed;
+	min-height: 100vh;
+	padding: 0;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #ededed;
+}
+
+.project-info {
+	padding: 4rem 3rem 3rem 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.project-logo {
+	width: 120px;
+	margin-bottom: 2rem;
+}
+
+.project-title {
+	font-size: 2rem;
+	letter-spacing: 2px;
+	color: #a98c7b;
+	margin-bottom: 1.5rem;
+	font-family: 'Barlow', Arial, sans-serif;
+}
+
+.project-desc {
+	font-size: 1.1rem;
+	color: #222;
+	margin-bottom: 2.5rem;
+	line-height: 1.6;
+}
+
+.project-details {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.project-details > div {
+	min-width: 180px;
+}
+
+.label {
+	display: block;
+	font-size: 0.95rem;
+	color: #a98c7b;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-bottom: 0.2rem;
+}
+
+.value {
+	font-size: 1rem;
+	color: #222;
+	font-weight: 600;
+}
+
+.value em {
+	font-style: italic;
+	font-weight: 400;
+	color: #444;
+	font-size: 0.95em;
+}
+
+.visit-btn {
+	display: inline-block;
+	margin-top: 2.5rem;
+	padding: 0.7rem 2rem;
+	background: #a98c7b;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	border: none;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: 1rem;
+	transition: background 0.2s;
+}
+
+.visit-btn:hover {
+	background: #222;
+	color: #fff;
+}
+
+.project-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #ededed;
+}
+
+.project-image img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+@media (max-width: 900px) {
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+	.project-image {
+		padding: 2rem 0;
+	}
+	.project-info {
+		padding: 2rem 1rem;
+	}
 }

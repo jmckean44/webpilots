@@ -23,7 +23,7 @@
 			text-align: center;
 			padding: 1.5rem clamp(0.75rem, 1.75vw, 5rem);
 			text-decoration: none;
-			font-weight: bold;
+			font-family: var.$font-sans-serif-bold;
 			text-transform: uppercase;
 			line-height: 1;
 			letter-spacing: 2px;
@@ -32,7 +32,6 @@
 			z-index: 1;
 			&.active {
 				color: var.$theme-clr;
-				font-family: var.$font-sans-serif-bold;
 				opacity: 0;
 				animation: slideDown 1s cubic-bezier(0, 0, 0.3, 1) forwards;
 				animation-delay: 0.2s;

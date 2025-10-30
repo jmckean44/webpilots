@@ -7,12 +7,38 @@
 // 	transition: background-position 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 // }
 
+.svg-shape-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 10;
+	pointer-events: none;
+}
+
+#morphing-shape {
+	display: block;
+	width: 100vw;
+	height: 180px;
+}
+
+#people {
+	max-width: 11z00px;
+	margin: 0 auto;
+}
+
 #people img {
 	max-width: 400px;
 }
 
 #people .flex {
 	margin: 0 auto 4rem;
+}
+
+.person:nth-child(2),
+.person:nth-child(3) {
+	border-top: #ccc solid 1px;
+	padding-top: 100px;
 }
 
 /* ====================

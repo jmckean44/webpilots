@@ -1,138 +1,62 @@
 @use 'variables.scss' as var;
 
-#devices {
-	position: relative;
-	border: 1px blue solid;
-	display: grid;
-	//overflow: hidden;
-	// display: flex;
-	// align-items: flex-end;
-	// justify-content: center;
+#devices-section .cell {
+	height: 500px;
+	//border: 1px red solid;
 }
 
 .device {
-	position: relative;
-	width: 100%;
+	position: absolute;
 	overflow: hidden;
-	display: flex;
-	border: 1px red solid;
+	height: 100%;
 }
 
-// MOBILE
-.device.mobile {
-	max-width: 200px;
-	aspect-ratio: 10 / 19;
-}
-
-.device.mobile .mask {
-	width: 100%;
-	z-index: 2;
-}
-
-.device.mobile .image {
-	position: absolute;
-	max-width: 100%;
-	top: 1%;
-	left: -34%;
-	right: auto;
-	transform: rotate(5.5deg) skewY(-13.5deg) scaleX(1.08);
-	opacity: 1;
-	z-index: 1;
-}
-
-// TABLET
-.device.tablet {
-	max-width: 400px;
-}
-
-.device.tablet .mask {
-	width: 100%;
-	z-index: 2;
-}
-
-.device.tablet .image {
-	position: absolute;
-	max-width: 100%;
-	top: 1%;
-	left: -34%;
-	right: auto;
-	transform: rotate(5.5deg) skewY(-13.5deg) scaleX(1.08);
-	opacity: 1;
-	z-index: 1;
-}
-
-// LAPTOP
 .device.laptop {
 	max-width: 800px;
+	aspect-ratio: 20 / 10;
+	top: 5%;
+	right: 5%;
+	left: auto;
+	width: 800px;
+	height: 450px;
 }
 
-.device.laptop .mask {
-	width: 100%;
-	z-index: 2;
-}
-
-.device.laptop .image {
-	position: absolute;
-	max-width: 100%;
-	top: 1%;
-	left: -34%;
+.device.mobile {
+	max-width: 300px;
+	aspect-ratio: 7 / 19;
+	top: 10%;
+	left: 10%;
 	right: auto;
-	transform: rotate(5.5deg) skewY(-13.5deg) scaleX(1.08);
-	opacity: 1;
+	overflow: hidden;
+	width: 220px;
+	height: 370px;
+}
+.device.mobile .image {
+	width: 70%;
+	margin-left: 14.5%;
+}
+
+.device .image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+
 	z-index: 1;
 }
 
-/* Animation states for trig.js */
-.device-hidden {
-	opacity: 0;
-	transform: translateY(60px) scale(0.95);
+.device .mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	//object-fit: cover;
+	overflow: hidden;
+	z-index: 2;
+	pointer-events: none;
 }
-
-.device-animate {
-	opacity: 1;
-	transform: translateY(0) scale(1);
-}
-
-// #devices > div {
-// 	position: relative;
-// 	border: 1px red solid;
-// }
-
-// #devices > div img.mask {
-// 	overflow: hidden;
-// 	z-index: 99;
-// }
-
-// .mobile img.scroll {
-// 	max-width: clamp(150px, 25vw, 250px);
-// 	transform: rotate(7.5deg);
-// 	position: relative;
-// 	margin-left: -20%;
-// 	z-index: 1;
-// }
-
-// .tablet img {
-// 	max-width: clamp(250px, 35vw, 350px);
-// 	z-index: 2;
-// }
-
-// #laptop img {
-// 	max-width: clamp(350px, 45vw, 650px);
-// 	z-index: 1;
-// }
-
-// .mask {
-// 	z-index: 4;
-// 	position: absolute;
-// }
-
-// /* Animation classes for trig.js */
-// .device-animate {
-// 	opacity: 1;
-// 	transform: translateY(0) scale(1);
-// }
-
-// .device-hidden {
-// 	opacity: 0;
-// 	transform: translateY(80px) scale(0.9);
-// }

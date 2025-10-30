@@ -102,6 +102,27 @@ document.addEventListener('asto: page-load', () => {
 	});
 });
 
+// lofo zoom
+document.addEventListener('astro:page-load', () => {
+	const logo = document.getElementById('logo-desktop');
+	if (!logo) return;
+
+	// Step 1: Zoom to upper right
+	setTimeout(() => {
+		logo.classList.add('zoom-top-right');
+	}, 400);
+
+	// Step 2: After zoom, hide and move to bottom left instantly
+	setTimeout(() => {
+		logo.classList.remove('zoom-top-right');
+		logo.classList.add('from-bottom-left');
+		// Step 3: Animate back to original position
+		setTimeout(() => {
+			logo.classList.remove('from-bottom-left');
+		}, 100); // Small delay to allow the class to apply
+	}, 1000); // Adjust timing as needed (700ms zoom + 1s pause)
+});
+
 // CHANGE BG COLOR ON SCROLL DOWN
 // window.addEventListener('scroll', () => {
 // 	const body = document.body;

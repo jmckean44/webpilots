@@ -1,0 +1,87 @@
+---
+export interface Props {
+	pageTitle: string;
+	pageSiteTitles: string;
+}
+import '../styles/global.scss';
+import '../styles/trig.scss';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { TITLE, DESCRIPTION, KEYWORDS, LOGO } from '../components/Constants.ts';
+
+const { pageTitle } = Astro.props as Props;
+const path = Astro.url.pathname;
+const pageSiteTitle = path === '/' ? `${TITLE}` : `${pageTitle} | ${TITLE}`;
+
+import { ClientRouter } from 'astro:transitions';
+---
+
+<html lang="en" class="light lenis">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<link rel="canonical" href="https://webpilots.ca" />
+
+		<meta name="description" content={DESCRIPTION || ''} />
+		<meta name="keywords" content={KEYWORDS} />
+		<meta name="theme-color" content="#3a3a42" />
+		<meta name="msapplication-navbutton-color" content="#3a3a42" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#3a3a42" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="msapplication-TileColor" content="#3a3a42" />
+		<meta name="msapplication-config" content="img/browserconfig.xml" />
+
+		<meta name="view-transtions" content="same-origin" />
+
+		<meta property="og:title" content={TITLE} />
+		<meta property="og:name" content={DESCRIPTION} />
+		<meta property="og:url" content={DESCRIPTION} />
+		<meta property="og:image" content={LOGO} />
+		<meta property="og:description" content={DESCRIPTION} />
+		<meta property="og:type" content="website" />
+
+		<!-- FAVICONS -->
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Web Pilots" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<!-- JSON-LD  -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Business",
+				"name": "",
+				"description": "",
+				"url": ""
+			}
+		</script>
+
+		<!-- Google tag (gtag.js) -->
+		<script is:inline defer src=""></script>
+		<script is:inline defer>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', '');
+		</script>
+
+		<title>{pageSiteTitle}</title>
+		<ClientRouter />
+	</head>
+
+	<body>
+		<Header />
+		<div class="progress-bar" id="progress-bar"></div>
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

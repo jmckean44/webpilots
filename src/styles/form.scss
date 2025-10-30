@@ -1,9 +1,9 @@
 @use 'variables' as var;
 
-$input-font: var.$font-sans-serif-reg;
+$input-font: var.$font-sans-serif-med;
 $input-font-size: 1rem;
 $input-font-size-button: 1rem;
-$input-font-clr: var.$font-sans-serif-reg;
+$input-font-clr: var.$font-sans-serif-med;
 $input-font-spacing: 0.5px;
 $input-background-clr: transparent;
 $input-background-focus: transparent;
@@ -11,7 +11,7 @@ $input-boxshadow: 0 #ccc 5px;
 $input-button-clr: #fff;
 $input-button-border: 2px #fff solid;
 $input-border-radius: 2px;
-$input-border: 1px var.$font-sans-serif-reg solid;
+$input-border: 1px #ccc solid;
 $input-span-bg: #fff;
 $input-padding: 0.8rem 0.75rem 0.75rem;
 
@@ -26,8 +26,7 @@ $input-transition: all ease 0.5s;
 
 form {
 	width: 100%;
-	max-width: 400px !important;
-	margin: 0 auto;
+	max-width: 300px !important;
 	text-transform: uppercase;
 }
 
@@ -50,7 +49,6 @@ form p {
 
 form div.error {
 	margin: 0rem 0 0.5rem;
-	padding: 0;
 	background-color: transparent;
 	font-size: 0.7rem;
 	font-style: italic;
@@ -60,16 +58,8 @@ form div.error {
 	color: var.$theme-clr;
 }
 
-form div.response {
-	font-family: var.$font-sans-serif-reg;
-	margin: 0;
-	padding: 0;
-	top: 0;
-	width: 100%;
-	line-height: 1.4;
-	color: var.$font-sans-serif-reg;
-	font-weight: 600;
-	text-transform: none;
+form div.error p {
+	padding: 1rem 0;
 }
 
 form div {
@@ -84,7 +74,7 @@ form span.helperText {
 	font-size: 12px;
 	line-height: $input-line-height;
 	font-weight: bold;
-	color: var.$font-sans-serif-reg;
+	color: var.$font-clr;
 	text-transform: uppercase;
 	font-family: var.$font-sans-serif-reg;
 	opacity: 0;
@@ -156,11 +146,18 @@ form label.error {
 	 PLACEHOLDERS
 ======================================= */
 input::placeholder {
-	color: var.$font-sans-serif-reg;
+	color: var.$font-clr;
+	font-family: var.$font-sans-serif-med;
+}
+
+form input[type='email'].dark::placeholder {
+	-webkit-text-fill-color: #fff;
+	font-family: var.$font-sans-serif-med;
 }
 
 textarea::placeholder {
-	color: var.$font-sans-serif-reg;
+	color: var.$font-clr;
+	font-family: var.$font-sans-serif-med;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -178,7 +175,7 @@ button {
 }
 
 .btn {
-	background: var.$font-sans-serif-reg;
+	background: var.$theme-clr;
 	display: inline-block;
 	width: auto;
 	color: #fff;
@@ -188,8 +185,7 @@ button {
 	cursor: pointer;
 	margin-top: 1rem;
 	text-align: center;
-	font-size: 1.4rem;
-	font-family: var.$theme-font;
+	font-family: var.$font-sans-serif-semibold;
 	letter-spacing: 1px;
 	transition: all ease 0.5s;
 }
@@ -229,8 +225,8 @@ textarea {
 	margin: $input-margin;
 	font-family: 'Calibribold', sans-serif;
 	font-size: $input-font-size;
-	color: var.$font-sans-serif-reg;
-	-webkit-text-fill-color: var.$font-sans-serif-reg;
+	color: var.$font-clr;
+	-webkit-text-fill-color: var.$font-clr;
 	text-transform: uppercase;
 	background-color: $input-background-clr;
 	border-radius: $input-border-radius;
@@ -254,7 +250,7 @@ textarea:focus {
 	background: $input-background-focus;
 	outline: none;
 	color: var.$theme-clr;
-	-webkit-text-fill-color: var.$font-sans-serif-reg;
+	-webkit-text-fill-color: var.$font-clr;
 	box-shadow: $input-focus-boxshadow;
 	transition: box-shadow 0.2s, border-color 0.2s ease-in-out;
 }
@@ -288,7 +284,7 @@ select {
 	font-family: 'Calibribold', sans-serif;
 	font-family: $input-font;
 	letter-spacing: $input-font-spacing;
-	color: var.$font-sans-serif-reg;
+	color: var.$font-clr;
 	background-color: $input-background-clr;
 	border: $input-border;
 	border-radius: $input-border-radius;
@@ -370,12 +366,9 @@ input[type='checkbox']:focus {
 	 INPUT RADIO
 ================================ */
 .label {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
+	display: block;
 	position: relative;
+	padding: 2rem 0 1rem;
 	cursor: pointer;
 	transition: all ease 0.3s;
 }

@@ -172,6 +172,7 @@ body {
 	font-size: min(max(1.5rem, 2vw), 20px);
 	height: 100%;
 	//background: var.$bg-clr; // see theme.scss
+	//background: linear-gradient(180deg, #efebe4, #ffffff80 300px, #fff);
 	position: relative;
 }
 
@@ -490,7 +491,7 @@ button {
 #intro {
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 50px 0 0;
+	padding: 150px 0 0;
 	//border: 1px red solid;
 }
 
@@ -527,6 +528,20 @@ $container-padding-mobile: 1.25rem;
 
 .container.top.btm {
 	padding: 150px $container-padding;
+}
+
+.bg-clr-drk {
+	background: var.$font-clr;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 6rem 3rem 10rem;
+	color: #fff;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	transition: all ease 0.3s;
 }
 
 @media (max-width: 800px) {
@@ -580,6 +595,64 @@ $container-padding-mobile: 1.25rem;
 
 .scrolled {
 	background: var.$font-clr;
+}
+
+.relative {
+	position: relative;
+}
+
+.white-txt {
+	color: #fff;
+	text-transform: none;
+}
+
+.highlight {
+	color: var.$highlight;
+}
+
+.center-col {
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.border-left {
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	padding-left: 3rem;
+}
+
+.dark-bg {
+	background: var.$font-clr;
+	color: #fff;
+}
+
+.dark-bg .cell {
+	padding-left: clamp(1.25rem, 3.5vw, 3rem) !important;
+	padding-right: clamp(1.25rem, 3.5vw, 3rem) !important;
+}
+
+.dark-bg .sub-title,
+.dark-bg p {
+	color: #fff;
+}
+
+.complimentary-bg {
+	background: var.$complimentary;
+	color: #fff;
+	border-radius: var.$bdr-radius-lrg;
+	padding: 6rem 3rem 10rem;
+	margin-bottom: 1.5rem;
+}
+
+.complimentary-bg .sub-title,
+.complimentary-bg p {
+	color: #fff;
+}
+
+@media (max-width: var.$mobile) {
+	.center-col {
+		border-left: 0;
+		border-right: 0;
+	}
 }
 
 /* =================================

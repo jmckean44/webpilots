@@ -1,106 +1,208 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PictureComponent from '../components/PictureComponent.astro';
 import { Picture } from 'astro:assets';
-import { Image }  from 'astro:assets';
+import { Image } from 'astro:assets';
 import flipbook1 from '../img/flipbook-1.webp';
 import flipbook2 from '../img/flipbook-2.webp';
 import flipbook3 from '../img/flipbook-3.webp';
 import flipbook4 from '../img/flipbook-4.webp';
 import flipbook5 from '../img/flipbook-5.webp';
 import mobileMask from '../img/mask-mobile.webp';
+import laptopMask from '../img/mask-laptop.webp';
 import mobile from '../img/mrc-mobile.webp';
-import tablet from '../img/mask-tablet.webp';
-import laptop from '../img/mask-laptop.webp';
+import laptop from '../img/mrc-laptop.webp';
+import airport from '../img/distance-airport.svg';
+import austria from '../img/distance-austria.svg';
+import bosnia from '../img/distance-bosnia.svg';
+import cz from '../img/distance-cz.svg';
+import france from '../img/distance-france.svg';
+import germany from '../img/distance-germany.svg';
+import hungary from '../img/distance-hungary.svg';
+import norway from '../img/distance-norway.svg';
+import poland from '../img/distance-poland.svg';
+import sweden from '../img/distance-sweden.svg';
+import uk from '../img/distance-uk.svg';
+import italy from '../img/distance-italy.svg';
+import marina from '../img/mrc-marina.webp';
+import promenade from '../img/mrc-promenade.webp';
+import resort from '../img/mrc-resort.webp';
+import gondola from '../img/mrc-gondola.webp';
+import foyer from '../img/mrc-foyer.webp';
+import htmlMRC from '../img/htmls/mrc.jpg';
+import logoMrc from '../img/mrc-logo.svg';
+import logoDalmi from '../img/mrc-logo-dalmi.svg';
+import logoMarina from '../img/mrc-logo-marina.svg';
+import mailchimp from '../img/logo-mailchimp.svg';
+import salesforce from '../img/logo-salesforce.svg';
 import '../styles/page-work.scss';
-
+import '../styles/mrc.scss';
+import '../styles/form.scss';
 ---
 
 <Layout pageTitle="Marina Resort Cavtat" pageSiteTitles="Web Pilots Services">
-
 	<section id="intro">
 		<div class="container top">
 			<div class="flex padding-x align-middle">
-				<div class="cell small-18 medium-9">
+				<div class="cell small-18 medium-18 large-9">
 					<h1>Marina Resort Cavtat</h1>
-					<p class="txt-lrg">Marina Resort Cavtat is an up and coming resort in Croatia. </p>
-					<p class="justify">
-						I was asked to create a multilingual registration page (full site is coming soon), which has generated over 10,000 leads internationally, to date. Astro JS was a good solution for performance, SEO, and accessibility. A Picture Component renders modern image versions. Videos have desktop and mobile versions and load using the Intersection Observer API. The forms submit to Salesforce Marketing Cloud for lead management.
+					<p class="txt-lrg">Marina Resort Cavtat is an up and coming resort in Croatia.</p>
+					<p class="justify margin-btm-med">
+						I was asked to create a multilingual registration page (full site is coming soon), which has generated over 10,000 leads internationally, to date. Astro JS was a good solution for
+						performance, SEO, and accessibility. A Picture Component renders modern image versions. Videos have desktop and mobile versions and load using the Intersection Observer API. The forms
+						submit to Salesforce Marketing Cloud for lead management.
 					</p>
-					
-					<p>more......</p>
 				</div>
-				<div class="cell small-18 medium-9" id="devices">fsefsdfs</div>
+				<div class="cell small-18 medium-18 large-9">
+					<div class="swiper swiper-intro">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<Image src={foyer} alt="Marina Resort Cavtat foyer" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={gondola} alt="Marina Resort Cavtat gondola" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={resort} alt="Marina Resort Cavtat resort" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={promenade} alt="Marina Resort Cavtat promenade" />
+							</div>
+							<div class="swiper-slide">
+								<Image src={marina} alt="Marina Resort Cavtat marina" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="logos" class="dark-bg">
+		<div class="container top btm">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<h2 class="title">Marketing Materials</h2>
+					<h3 class="sub-title">Logo Redesign</h3>
+					<p class="txt-lrg">We were asked to clean up and convert the company logos from old pixelated jpegs into a vector format that could be used across all platforms.</p>
+					<p class="margin-btm-lrg">
+						The Dalmi Resorts International logo is a beautifully intricate design that combines classic heraldic elements with modern elegance. The fine linework and balanced composition reflect both
+						sophistication and attention to detail, making the logo instantly recognizable and a strong symbol of the resort’s commitment to quality and luxury.
+					</p>
+				</div>
+				<div class="cell small-18 medium-9" id="logos">
+					<div class="trig-parallax-left enable-trig" data-trig-var="true">
+						<Image src={logoDalmi} class="trig-target" alt="Dalmin International logo" />
+					</div>
+					<div class="trig-parallax-down enable-trig" data-trig-var="true">
+						<Image src={logoMarina} class="trig-target" alt="Marina Resort Cavtat logo" />
+					</div>
+					<div class="trig-parallax-up enable-trig" data-trig-var="true">
+						<Image src={logoMrc} class="trig-target" alt="Marina Resort Cavtat logo" />
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="devices-section">
-		<div class="container top">
+		<div class="container top btm">
 			<div class="flex padding-x align-middle">
-				<div class="cell small-18">
-					<h2 class="title">Devices....</h2>
-					<h3 class="sub-title">XXXXXXXXX</h3>
-					<p>Marina Resort Cavtat is an up and coming resort in Croatia. </p>
-					<p>
-						saasdasd
-					</p>	
-
-
-		
-
-
-					<div id="devices">
-		
-							<div class="device mobile trig-parallax-down enable-trig" data-trig-var="true">
-								<Image src={mobileMask} class="mask" alt="Mobile image mask" />
-								<Image src={mobile} class="image trig-target" alt="Mobile device" />
-							</div>
-							<div class="device tablet">
-								<Image src={tablet} class="mask" alt="Tablet image mask" />
-								<Image src={mobile} class="image" alt="Tablet device" />
-							</div>
-							<div class="device laptop">
-								<Image src={laptop} class="mask" alt="Laptop image mask" />
-								<Image src={mobile} class="image" alt="Laptop device" />
-						</div>
+				<div class="cell small-18 relative">
+					<div class="device mobile trig-parallax-up enable-trig" data-trig-var="true">
+						<Image src={mobileMask} class="mask" alt="Mobile image mask" />
+						<Image src={mobile} class="image trig-target" alt="Mobile device" />
 					</div>
-
-
-				
+					<div class="device laptop trig-parallax-up enable-trig" data-trig-var="true">
+						<Image src={laptopMask} class="mask" alt="Laptop image mask" />
+						<Image src={laptop} class="image trig-target" alt="Laptop device" style="--trig-direction: " />
+					</div>
 				</div>
-				<div class="cell small-18">gdgdfgdf</div>			
 			</div>
 		</div>
 	</section>
 
+	<section id="htmls-container" class="dark-bg">
+		<div class="container top btm">
+			<div class="flex padding-x" id="html-examples">
+				<div class="cell small-18 medium-9 large-6">
+					<h2 class="title">Email Campaigns</h2>
+					<h3 class="sub-title">Hand Coded HTMLs</h3>
+					<p class="justify">
+						We specialize in crafting custom HTML email campaigns that are both visually engaging and technically robust. Every campaign is hand-coded to ensure pixel-perfect rendering across all
+						major email clients, including Outlook.
+					</p>
+					<p class="margin-btm-med justify">
+						We rigorously test our emails using tools like Litmus to guarantee responsiveness and deliverability. Our process emphasizes clean code, accessibility, and optimized images, resulting in
+						campaigns that not only look great but also perform exceptionally well. Whether you need a simple announcement or a complex, multi-column layout, Web Pilots delivers reliable, high-impact
+						email solutions tailored to your brand and audience..
+					</p>
+					<ul class="campaign-stats">
+						<li>98% Delivery Rate</li>
+						<li>20+ Email Clients Tested</li>
+						<li>2 and 3 Column Stackable Layouts</li>
+						<li>Same-day Turnaround</li>
+					</ul>
+				</div>
+				<div class="cell small-18 medium-9 large-6 center-col">
+					<h2 class="title">Lead Management</h2>
+					<h3 class="sub-title">Marketing Platforms</h3>
+					<p>We can manage your leads in any CRM or marketing and email platforms</p>
+					<p class="margin-btm-med"></p>
+					<div class="mailchimp trig-parallax-left enable-trig" data-trig-var="true">
+						<Image src={mailchimp} class="trig-target" alt="Mailchimp logo" />
+					</div>
+					<div class="salesforce trig-parallax-right enable-trig" data-trig-var="true">
+						<Image src={salesforce} class="trig-target" alt="Salesforce logo" />
+					</div>
+				</div>
+				<div class="cell small-18 medium-9 large-6">
+					<h2 class="title highlight">SEND A TEST!</h2>
+					<h3 class="sub-title">Send an HTML to Your Inbox</h3>
+					<p class=""><strong>To receive a test in your inbox:</strong></p>
+					<p class="margin-btm-med">Enter your <strong>email</strong> address, select a <strong>campaign</strong> below, and click <strong>SEND</strong>.</p>
+
+					<form id="htmls" method="POST">
+						<div class="email-container">
+							<label for="email" class="visually-hidden">Email</label>
+							<input type="email" name="email" class="email dark" id="email" placeholder="Email" />
+							<span class="helperText">EMAIL</span>
+						</div>
+						<div class="response"></div>
+						<input class="btn" name="submit" type="submit" value="SEND" />
+
+						<div id="campaigns" class="easing">
+							<div>
+								<label class="label" for="MarinaResortCavtat">
+									<input type="radio" name="campaign" value="mrc" id="MarinaResortCavtat" class="radio-input" checked />
+									<div class="radio-design"></div>
+								</label>
+								<Picture src={htmlMRC} formats={['avif', 'webp']} alt="Marina Resort Cavtat" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section id="flipbook">
 		<div class="container top btm">
 			<div class="flex padding-x">
 				<div class="cell small-18 medium-9">
 					<h2 class="title">Marketing Materials</h2>
-					<h2 class="sub-title">Flipbook Brochure</h2>
-					<p class="txt-lrg">As part of the marketing materials to be available for the sales team, we were asked to create a Flipbook brochure for potential buyers and investors to 	 </p>
-
-</div>
-					<div class="cell small-18 medium-9"></div>
-					<div class="cell small-18">	
-<p class="margin-btm-lrg">
-					<a 
-						href="https://www.flipsnack.com/6C9F85AA9F7/marina-resort-cavtat-ebook/full-view.html" 
-						target="_blank" 
-						rel="noopener noreferrer"
-						class="underline"
-					>
-						View Flipbook Brochure
-					</a>
-</p>
+					<h3 class="sub-title">Flipbook Brochure</h3>
+					<p class="txt-lrg">As part of the marketing materials to be available for the sales team, we were asked to create a Flipbook brochure for potential buyers and investors to...</p>
+				</div>
+				<div class="cell small-18 medium-9"></div>
+				<div class="cell small-18">
+					<p class="margin-btm-lrg">
+						<a href="https://www.flipsnack.com/6C9F85AA9F7/marina-resort-cavtat-ebook/full-view.html" target="_blank" rel="noopener noreferrer" class="underline"> View Flipbook Brochure </a>
+					</p>
 
 					<div class="swiper swiper-intro">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-							<Image src={flipbook1} alt="Marina Resort Cavtat Flipbook" />
+								<Image src={flipbook1} alt="Marina Resort Cavtat Flipbook" />
 							</div>
 							<div class="swiper-slide">
 								<Image src={flipbook2} alt="Marina Resort Cavtat Flipbook" />
@@ -116,63 +218,140 @@ import '../styles/page-work.scss';
 							</div>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="flipbook">
-	<div class="container top btm">
-		<div class="flex padding-x">
-			<div class="cell small-18">
-	<div id="timeline">
-		<video class="timeline" playsinline autoplay muted loop style="pointer-events: none;" poster="/timeline-poster-desktop.webp">
-			<source data-src="/timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
-			<source data-src="/timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
-		</video>
-	</div>
-	</div>
-		</div>	</div>
+	<section id="timeline">
+		<div class="container top">
+			<div class="flex padding-x">
+				<div class="cell small-18 medium-9">
+					<h2 class="title">Animated Timeline</h2>
+					<h3 class="sub-title">Proximities to the Resort</h3>
+					<p class="txt-lrg">We were asked to create an animated timeline to reveal distances to the resort from major cities.</p>
+					<p>
+						This looping plane animation concept has two versions with different aspect ratios, one for desktop and one for mobile, and includes a background image poster that displays until the video
+						loads.
+					</p>
+					<p class="margin-btm-lrg">The final video is optimized for better performance and uses the browser IntersectionObserver API so it only plays when its close to being in the viewport.</p>
+				</div>
+				<div class="cell small-18 medium-9" id="distances">
+					<div class="trig-parallax-up enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={austria} class="trig-target" alt="austria icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-left enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={airport} class="trig-target" alt="airport icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-down enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={bosnia} class="trig-target" alt="bosnia icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-left enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={italy} class="trig-target" alt="italy icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-right enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={germany} class="trig-target" alt="germany icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-up enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={cz} class="trig-target" alt="airport icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-left enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={hungary} class="trig-target" alt="hungary icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-left enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={france} class="trig-target" alt="france icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-up enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={norway} class="trig-target" alt="norway icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-right enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={poland} class="trig-target" alt="poland icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-right enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={sweden} class="trig-target" alt="sweden icon" />
+						</span>
+					</div>
+
+					<div class="trig-parallax-up enable-trig" data-trig-var="true">
+						<span class="trig-target">
+							<Image src={uk} class="trig-target" alt="uk icon" />
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="video-container">
+			<video class="timeline" playsinline autoplay muted loop style="pointer-events: none;" poster="/timeline-poster-desktop.webp">
+				<source data-src="/timeline-desktop.mp4" type="video/mp4" media="all and (min-width:850px)" />
+				<source data-src="/timeline-mobile.mp4" type="video/mp4" media="all and (max-width:849px)" />
+			</video>
+		</div>
 	</section>
 
+	<script src="../scripts/swiper-intro.js"></script>
+	<script src="../scripts/swiper-projects.js"></script>
+	<script src="../scripts/lazyload-videos.js"></script>
+	<script src="../scripts/htmls.js"></script>
 
-
-
-
-</Layout>
-
-<script src="../scripts/swiper-projects.js"></script>
-
-<script>
-	const mainVideo = document.querySelector('.timeline');
-	const desktopVideo = '/timeline-desktop.mp4';
-	const mobileVideo = '/timeline-mobile.mp4';
-	const desktopPoster = '/timeline-poster-desktop.webp';
-	const mobilePoster = '/timeline-poster-mobile.webp';
-	const winWidth = window.innerWidth;
-
-	if (mainVideo) {
-		if (winWidth < 850) {
-			mainVideo.setAttribute('poster', mobilePoster);
-		} else {
-			mainVideo.setAttribute('poster', desktopPoster);
-		}
-	}
-
-	window.addEventListener('resize', function () {
+	<script>
+		const mainVideo = document.querySelector('.timeline');
+		const desktopVideo = '/timeline-desktop.mp4';
+		const mobileVideo = '/timeline-mobile.mp4';
+		const desktopPoster = '/timeline-poster-desktop.webp';
+		const mobilePoster = '/timeline-poster-mobile.webp';
 		const winWidth = window.innerWidth;
 
 		if (mainVideo) {
 			if (winWidth < 850) {
 				mainVideo.setAttribute('poster', mobilePoster);
-				mainVideo.setAttribute('src', mobileVideo);
 			} else {
 				mainVideo.setAttribute('poster', desktopPoster);
-				mainVideo.setAttribute('src', desktopVideo);
 			}
 		}
-	});
-</script>
 
+		window.addEventListener('resize', function () {
+			const winWidth = window.innerWidth;
+
+			if (mainVideo) {
+				if (winWidth < 850) {
+					mainVideo.setAttribute('poster', mobilePoster);
+					mainVideo.setAttribute('src', mobileVideo);
+				} else {
+					mainVideo.setAttribute('poster', desktopPoster);
+					mainVideo.setAttribute('src', desktopVideo);
+				}
+			}
+		});
+	</script>
+</Layout>

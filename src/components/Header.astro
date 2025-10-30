@@ -14,26 +14,25 @@ import wordmark from '../img/logo-wordmark.svg';
 		<div id="logo-desktop">
 			<a href="/" aria-label="Logo" role="link" aria-label="link to homepage">
 				<Image src={logo} class="logo" alt="Web Pilots logo" />
-				<!-- <Image src={wordmark} class="wordmark" alt="Web Pilots wordmark" /> -->
 			</a>
 		</div>
 
 		<nav id="nav-desktop">
 			<ul>
 				<li>
-					<a class={currentPath === '' ? 'active' : ''} href="/" role="link" aria-label="link to Homepage">HOME</a>
+					<a class={currentPath === '' ? 'active' : ''} href="/" data-astro-reload role="link" aria-label="link to Homepage">HOME</a>
 				</li>
 				<li>
-					<a class={currentPath === 'services/' ? 'active' : ''} href="/services/" role="link" aria-label="link to SERVICES page">SERVICES</a>
+					<a class={currentPath === 'services/' ? 'active' : ''} href="/services/" data-astro-reload role="link" aria-label="link to SERVICES page">SERVICES</a>
 				</li>
 				<li>
-					<a class={currentPath === 'work/' ? 'active' : ''} href="/work/" role="link" aria-label="link to WORK page">WORK</a>
+					<a class={currentPath === 'work/' ? 'active' : ''} href="/work/" data-astro-reload role="link" aria-label="link to WORK page">WORK</a>
 				</li>
 				<li>
 					<a class={currentPath === 'about/' ? 'active' : ''} href="/about/" role="link" aria-label="link to ABOUT page">ABOUT</a>
 				</li>
 				<li>
-					<a class={currentPath === 'contact/' ? 'active' : ''} href="/contact/" role="link" aria-label="link to contact page">CONTACT</a>
+					<a class={currentPath === 'contact/' ? 'active' : ''} href="/contact/" data-astro-reload role="link" aria-label="link to contact page">CONTACT</a>
 				</li>
 			</ul>
 		</nav>

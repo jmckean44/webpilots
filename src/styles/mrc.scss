@@ -1,13 +1,161 @@
 @use 'variables.scss' as var;
 
-#flipbook {
-	border: 1px #f2f2f2 solid;
-}
-
 #timeline {
 	width: 100%;
 }
 
 #timeline .timeline {
 	width: 100%;
+}
+
+// TIMELINE VIDEO
+#distances {
+	position: relative;
+}
+
+#distances .enable-trig {
+	position: absolute;
+	width: 90px;
+	height: 60px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	//border: 1px red solid;
+}
+
+#distances .enable-trig img {
+	width: 70px;
+	height: 50px;
+	opacity: 0.25;
+}
+
+#distances .enable-trig:first-child {
+	left: -70%;
+	top: -15%;
+}
+
+#distances .enable-trig:nth-child(2) {
+	top: -20%;
+	left: 10%;
+}
+#distances .enable-trig:nth-child(3) {
+	left: -50%;
+	top: 15%;
+}
+#distances .enable-trig:nth-child(4) {
+	top: 75%;
+	left: 65%;
+}
+#distances .enable-trig:nth-child(5) {
+	top: 30%;
+	left: 70%;
+}
+#distances .enable-trig:nth-child(6) {
+	top: -10%;
+	left: 80%;
+}
+#distances .enable-trig:nth-child(7) {
+	top: 70%;
+	left: 10%;
+}
+#distances .enable-trig:nth-child(8) {
+	top: 5%;
+	left: 40%;
+}
+#distances .enable-trig:nth-child(9) {
+	top: 60%;
+	left: -50%;
+}
+#distances .enable-trig:nth-child(10) {
+	left: 0%;
+	top: 10%;
+}
+#distances .enable-trig:nth-child(11) {
+	top: 40%;
+	left: -70%;
+}
+#distances .enable-trig:nth-child(12) {
+	top: 40%;
+	left: 0%;
+}
+
+.video-container {
+	margin: 50px auto 150px;
+	//max-width: 1470px;
+}
+
+@media (max-width: 700px) {
+	#distances .enable-trig img {
+		width: 40px;
+		height: 30px;
+		opacity: 0.3;
+	}
+	#distances {
+		height: 200px;
+	}
+	.video-container {
+		margin: 0 auto 0;
+	}
+}
+
+form img {
+	max-width: 200px;
+}
+
+// .htmls-container {
+// 	background: rgba(255, 255, 255, 0.05);
+// 	border-radius: var.$bdr-radius-med;
+// 	padding: 3rem;
+// }
+
+.htmls-container .campaign-stats {
+	border-radius: var.$bdr-radius-med;
+	font-size: 1.5rem;
+	list-style-position: outside;
+	margin: 0 0 3rem;
+	max-width: 500px;
+	padding: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#htmls-container .campaign-stats li {
+	line-height: 1.2;
+	padding-left: 1.75rem;
+}
+
+#htmls-container .campaign-stats li:before {
+	content: '';
+	position: absolute;
+	background: url('../img/checkmark.svg') no-repeat left 5px;
+	background-size: 18px;
+	width: 25px;
+	height: 30px;
+	margin-left: -2rem;
+	padding: 0.5rem 0;
+}
+
+#logos {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 150px;
+}
+
+#logos img {
+	max-width: 150px;
+}
+
+.mailchimp {
+	max-width: 100px;
+	display: flex;
+	margin: 0 auto;
+}
+
+.salesforce {
+	max-width: 100px;
+	display: flex;
+	margin: 0 auto;
+}
+
+#htmls .radio-input {
+	opacity: 0;
 }
